@@ -27,7 +27,7 @@ function Boot() {
       );
   };
   return (
-    <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800">
+    <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center">
       <div className="h-screen w-screen border-4 border-white flex items-center justify-center rounded-lg p-2 bg-black md:m-10 md:w-full">
         <div className={visibilty}>
           <div className="relative">

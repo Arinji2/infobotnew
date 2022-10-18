@@ -14,7 +14,6 @@ function App() {
           <Route path="/auth" element={<Auth />}></Route>
         </Routes>
       </Router>
-      <Boot />
       <h1></h1>
     </div>
   );
