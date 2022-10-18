@@ -29,16 +29,17 @@ function Auth() {
           );
           setTimeout(() => {
             setUserTrue(false);
-            setTimeout(() => {}, 100);
+            setTimeout(() => {
+              window.location.assign("/off");
+            }, 100);
           }, 1000);
         }, 5000);
       }
     });
-    window.addEventListener("load", () => {
-      setVisibilty(
-        "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700"
-      );
-    });
+
+    setVisibilty(
+      "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700"
+    );
   });
 
   const loginwithGoogle = () => {
