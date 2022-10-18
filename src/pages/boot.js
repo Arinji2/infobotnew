@@ -1,7 +1,6 @@
 import { Triangle } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 import "./pages.css";
-import Phone from "../assets/phone.png";
 import Logo from "../assets/logo.png";
 function Boot() {
   const [isBooting, setIsBooting] = useState(true);
@@ -12,20 +11,22 @@ function Boot() {
   useEffect(() => {
     if (document.readyState !== "") {
       setTimeout(() => {
-        setIsBooting(false);
         setVisibilty(
-          "relative bottom-20 flex flex-col items-center justify-start invisible"
+          "relative bottom-20 flex flex-col items-center justify-start opacity-0 transition-all ease-in-out duration-500"
         );
-        window.location.assign("/auth");
+        setTimeout(() => {
+          setIsBooting(false);
+          setTimeout(() => {
+            window.location.assign("/auth");
+          }, 100);
+        }, 1000);
       }, 5000);
     }
   });
 
   const loaderChoice = (choice) => {
     if (choice === 1)
-      return (
-        <Triangle color="yellow" height="300" width="300" visible={isBooting} />
-      );
+      return <Triangle color="yellow" height="300" width="300" />;
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center">

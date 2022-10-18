@@ -14,18 +14,32 @@ import {
 import { getDoc, doc, setDoc } from "firebase/firestore";
 function Auth() {
   const [userTrue, setUserTrue] = useState(false);
+  const [visibilty, setVisibilty] = useState(
+    "relative bottom-20 flex flex-col items-center justify-start opacity-0"
+  );
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(userTrue);
-      console.log(user.displayName);
       if (user) {
         setUserTrue(true);
         getDocs();
         setTimeout(() => {
-          window.location.assign("/off");
+          setVisibilty(
+            "relative bottom-20 flex flex-col items-center justify-start opacity-0 transition-all ease-in-out duration-700"
+          );
+          setTimeout(() => {
+            setUserTrue(false);
+            setTimeout(() => {}, 100);
+          }, 1000);
         }, 5000);
       }
+    });
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        setVisibilty(
+          "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700"
+        );
+      }, 100);
     });
   });
 
@@ -65,9 +79,9 @@ function Auth() {
     if (choice === 1) return <Grid color="yellow" height="200" width="200" />;
   };
   return (
-    <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center">
-      <div className="h-screen w-fit border-4 border-white flex items-center justify-center rounded-lg p-2 bg-black md:m-10 md:w-full bg">
-        <div className={"relative"}>
+    <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center opacity-100 transition-all ease-in-out duration-500">
+      <div className="h-screen w-fit border-4 border-white flex items-center justify-center rounded-lg p-2  md:m-10 md:w-full bg">
+        <div className={visibilty}>
           <h1 className="text-4xl md:text-6xl text-white os font-bold">
             Login to Your Device
           </h1>
@@ -78,10 +92,10 @@ function Auth() {
             <FontAwesomeIcon icon={faGoogle} className="" /> Login with Google
           </button>
           <div className="flex flex-col items-center gap-5">
-            <div className="relative top-10">
+            <div className="relative top-10 h-32 w-32">
               {userTrue ? loaderChoice(1) : loaderChoice(0)}
             </div>
-            <div className="max-h-28 w-28 relative top-16 hidden md:block">
+            <div className="max-h-28 w-28 relative top-20 hidden md:block">
               <img src={Logo} alt={Logo}></img>
             </div>
           </div>
