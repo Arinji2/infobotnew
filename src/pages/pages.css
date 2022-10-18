@@ -5,11 +5,9 @@
 }
 
 .bg {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 104, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-image: url("../assets/phone1.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

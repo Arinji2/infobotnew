@@ -2,6 +2,7 @@ import { Grid } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 import "./pages.css";
 import Logo from "../assets/logo.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { auth, db } from "../firebase.config";
@@ -65,7 +66,7 @@ function Auth() {
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center">
-      <div className="h-screen w-fit border-4 border-white flex items-center justify-center rounded-lg p-2 bg-black md:m-10 md:w-full">
+      <div className="h-screen w-fit border-4 border-white flex items-center justify-center rounded-lg p-2 bg-black md:m-10 md:w-full bg">
         <div className={"relative"}>
           <h1 className="text-4xl md:text-6xl text-white os font-bold">
             Login to Your Device

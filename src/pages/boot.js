@@ -1,6 +1,7 @@
 import { Triangle } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 import "./pages.css";
+import Phone from "../assets/phone.png";
 import Logo from "../assets/logo.png";
 function Boot() {
   const [isBooting, setIsBooting] = useState(true);
@@ -28,15 +29,16 @@ function Boot() {
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center">
-      <div className="h-screen w-screen border-4 border-white flex items-center justify-center rounded-lg p-2 bg-black md:m-10 md:w-full">
+      <div className="h-screen w-screen border-4 border-white flex items-center justify-center rounded-lg p-2 md:m-10 md:w-full bg">
         <div className={visibilty}>
           <div className="relative">
             {isBooting ? loaderChoice(1) : loaderChoice(0)}
           </div>
-
           <div className="logo absolute text-white w-1/4 h-1/4">
             <img src={Logo} alt={Logo}></img>
           </div>
+
+          <div className="logo absolute text-white w-1/4 h-1/4"></div>
           <h1 className="text-white text-2xl md:text-4xl os font-bold">
             InfoBot Is Booting
           </h1>
