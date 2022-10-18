@@ -16,9 +16,7 @@ function Boot() {
         );
         setTimeout(() => {
           setIsBooting(false);
-          setTimeout(() => {
-            window.location.assign("/auth");
-          }, 100);
+          window.location.assign("/auth");
         }, 1000);
       }, 5000);
     }

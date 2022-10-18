@@ -35,11 +35,9 @@ function Auth() {
       }
     });
     window.addEventListener("load", () => {
-      setTimeout(() => {
-        setVisibilty(
-          "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700"
-        );
-      }, 100);
+      setVisibilty(
+        "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700"
+      );
     });
   });
 
