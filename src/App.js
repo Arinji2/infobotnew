@@ -4,7 +4,8 @@ import "./App.css";
 import Screen from "./components/screen";
 import Boot from "./pages/boot";
 import Auth from "./pages/auth";
-
+import Off from "./pages/off";
+import Idle from "./pages/idle";
 function App() {
   return (
     <div className="main">
@@ -13,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Boot />}></Route>
           <Route path="/auth" element={<Auth />}></Route>
+          <Route path="/off" element={<Off />}></Route>
+          <Route path="/idle" element={<Idle />}></Route>
         </Routes>
       </Router>
     </div>

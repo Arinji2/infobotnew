@@ -17,7 +17,7 @@ function Auth() {
   const [visibilty, setVisibilty] = useState(
     "relative bottom-20 flex flex-col items-center justify-start opacity-0"
   );
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {

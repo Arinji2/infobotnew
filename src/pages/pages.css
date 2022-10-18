@@ -11,3 +11,23 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+#logo {
+  animation-name: periodicfading;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes periodicfading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
