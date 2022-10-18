@@ -38,7 +38,7 @@ function Auth() {
     });
 
     setVisibilty(
-      "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700"
+      "relative bottom-20 flex flex-col items-center justify-start opacity-100 transition-all ease-in-out duration-700 z-30"
     );
   });
 
