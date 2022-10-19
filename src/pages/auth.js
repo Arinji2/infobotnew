@@ -30,7 +30,7 @@ function Auth() {
           setTimeout(() => {
             setUserTrue(false);
             setTimeout(() => {
-              window.location.assign("/off");
+              window.location.assign("/phone");
             }, 100);
           }, 1000);
         }, 5000);

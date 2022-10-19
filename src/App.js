@@ -6,6 +6,7 @@ import Boot from "./pages/boot";
 import Auth from "./pages/auth";
 import Off from "./pages/off";
 import Idle from "./pages/idle";
+import Phone from "./pages/phone";
 function App() {
   return (
     <div className="main">
@@ -16,6 +17,7 @@ function App() {
           <Route path="/auth" element={<Auth />}></Route>
           <Route path="/off" element={<Off />}></Route>
           <Route path="/idle" element={<Idle />}></Route>
+          <Route path="/phone" element={<Phone />}></Route>
         </Routes>
       </Router>
     </div>
