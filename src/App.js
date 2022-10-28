@@ -11,6 +11,8 @@ import WhatBoot from "./pages/what/whatBoot";
 import What from "./pages/what/what";
 import WhyBoot from "./pages/why/whyBoot";
 import Why from "./pages/why/why";
+import ContactBoot from "./pages/contact/contactBoot";
+import Contact from "./pages/contact/contact";
 function App() {
   return (
     <div className="main">
@@ -26,6 +28,8 @@ function App() {
           <Route path="/what-Loaded" element={<What />}></Route>
           <Route path="/why" element={<WhyBoot />}></Route>
           <Route path="/why-Loaded" element={<Why />}></Route>
+          <Route path="/contact" element={<ContactBoot />}></Route>
+          <Route path="/contact-Loaded" element={<Contact />}></Route>
         </Routes>
       </Router>
     </div>
