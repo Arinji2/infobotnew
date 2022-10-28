@@ -154,10 +154,23 @@ function Phone() {
           </div>
           {/*Row 4 */}
           <div className="flex flex-row flex-nowrap justify-evenly md:justify-evenly w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center border-b-2 border-white rounded-xl pb-4 mt-4">
-            <h1>What</h1>
-            <h1>Why</h1>
-            <h1>Who</h1>
-            <h1>Team</h1>
+            <h1
+              className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300"
+              onClick={() => {
+                window.location.assign("/what");
+              }}
+            >
+              What
+            </h1>
+            <h1 className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300">
+              Why
+            </h1>
+            <h1 className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300">
+              Who
+            </h1>
+            <h1 className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300">
+              Team
+            </h1>
           </div>
           {/*Row 5 */}
           <div className="flex flex-row flex-nowrap justify-center  w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center pb-4 absolute bottom-0">
