@@ -49,3 +49,8 @@ html {
     opacity: 0;
   }
 }
+
+.animate-info {
+  animation: fadeInUp;
+  animation-duration: 1s;
+}

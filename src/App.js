@@ -7,6 +7,8 @@ import Auth from "./pages/auth";
 import Off from "./pages/off";
 import Idle from "./pages/idle";
 import Phone from "./pages/phone";
+import WhatBoot from "./pages/what/whatBoot";
+import What from "./pages/what/what";
 function App() {
   return (
     <div className="main">
@@ -18,6 +20,8 @@ function App() {
           <Route path="/off" element={<Off />}></Route>
           <Route path="/idle" element={<Idle />}></Route>
           <Route path="/phone" element={<Phone />}></Route>
+          <Route path="/what" element={<WhatBoot />}></Route>
+          <Route path="/what-Loaded" element={<What />}></Route>
         </Routes>
       </Router>
     </div>
