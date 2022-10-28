@@ -9,6 +9,8 @@ import Idle from "./pages/idle";
 import Phone from "./pages/phone";
 import WhatBoot from "./pages/what/whatBoot";
 import What from "./pages/what/what";
+import WhyBoot from "./pages/why/whyBoot";
+import Why from "./pages/why/why";
 function App() {
   return (
     <div className="main">
@@ -22,6 +24,8 @@ function App() {
           <Route path="/phone" element={<Phone />}></Route>
           <Route path="/what" element={<WhatBoot />}></Route>
           <Route path="/what-Loaded" element={<What />}></Route>
+          <Route path="/why" element={<WhyBoot />}></Route>
+          <Route path="/why-Loaded" element={<Why />}></Route>
         </Routes>
       </Router>
     </div>

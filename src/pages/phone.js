@@ -162,7 +162,12 @@ function Phone() {
             >
               What
             </h1>
-            <h1 className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300">
+            <h1
+              className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300"
+              onClick={() => {
+                window.location.assign("/why");
+              }}
+            >
               Why
             </h1>
             <h1 className="scale-90 hover:scale-100 hover:cursor-pointer transition-all ease-in-out duration-300">
