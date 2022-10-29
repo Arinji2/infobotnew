@@ -118,7 +118,9 @@ function Team() {
             <p
               className="text-white text-2xl  block md:hidden"
               onMouseOver={() => {
-                setArrowLeftRotate("fast-spin scale-100 hover:cursor-pointer");
+                setArrowLeftRotate(
+                  "fast-spin-left scale-100 hover:cursor-pointer"
+                );
               }}
               onMouseOut={() => {
                 setArrowLeftRotate("scale-90 hover:cursor-pointer");
