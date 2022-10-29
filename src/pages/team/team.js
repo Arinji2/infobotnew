@@ -16,7 +16,9 @@ import Arinji from "./profiles/Arinji.png";
 import Vedika from "./profiles/Vedika.png";
 import Nilay from "./profiles/Nilay.png";
 import Saesha from "./profiles/Saesha.png";
-
+import Aryan from "./profiles/Aryan.png";
+import Unknown from "./profiles/Unknown.png";
+import Aditya from "./profiles/Aditya.png";
 function Team() {
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
@@ -29,11 +31,121 @@ function Team() {
     "scale-90 hover:cursor-pointer"
   );
 
+  const [page, setPage] = useState(0);
   useEffect(() => {
     setTimeout(() => {
       setOpacity("opacity-100 z-20 transition-all duration-500 ease-in-out");
     }, 500);
   });
+
+  const renderPage = (option) => {
+    if (option === 0) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <div id="prf-1">
+            <Profile
+              name={"Arinjay Dhar"}
+              role={"Chief Executive Officer"}
+              icon={Arinji}
+              about={
+                "Creator of the Site, Extroverted and Excited. Loves coding in React Js and aspires to work for Google. Exceptionally bad at Hindi and has a weird American Accent. Caffeinated 24/7."
+              }
+              insta={"https://www.instagram.com/34arinji/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
+            />
+          </div>
+          <div id="prf-1">
+            <Profile
+              name={"Vedika Panjwani"}
+              role={"Chief Operating Officer"}
+              icon={Vedika}
+              about={
+                "An ambivert, someone with whom you become friends very easily. Hardcore bollywood fan and hence adapts to the situation easily. Loves computer applications, yellow lays and the sky.  "
+              }
+              insta={"https://www.instagram.com/vedika_panjwani/"}
+              email={"mailto:vedikapanjwani115@gmail.com"}
+            />
+          </div>
+          <div id="prf-1">
+            <Profile
+              name={"Nilay Bagchi"}
+              role={"Chief Financial Officer"}
+              icon={Nilay}
+              about={
+                "Calm, Cool and Collected. The chill guy you would go to when you feel low. Hopes for depression to be eradicated from the world,and does his best to help others against it.  "
+              }
+              insta={"https://www.instagram.com/34arinji/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
+            />
+          </div>
+          <div id="prf-1">
+            <Profile
+              name={"Saesha Chaturvedi"}
+              role={"Manager"}
+              icon={Saesha}
+              about={
+                "Simple yet Marvelous. Always there to support all her peers, and never lets anyone feel left out. Hates holding grudges and is loved by everyone."
+              }
+              insta={"https://www.instagram.com/sash._14._/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
+            />
+          </div>
+        </div>
+      );
+    }
+    if (option === 1) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <Profile
+            name={"Aryan Pandey"}
+            role={"CSO"}
+            icon={Aryan}
+            about={
+              "An Awesome Dude, Exceptionally good at Computers. Could take over the world if he wanted, but is too lazy. Can go from your best friend to your worst enemy with the snap of a finger."
+            }
+            insta={"https://www.instagram.com/34arinji/"}
+            email={"mailto:arinjaydhar205@gmail.com"}
+          />
+          <Profile
+            name={"Aarav Mehta"}
+            role={"Donator"}
+            icon={Unknown}
+            about={
+              "Prime Example of a true friend. If one homeless person was given a home for every time Aarav is seen not smiling, homelessness would still be a thing "
+            }
+            insta={"https://www.instagram.com/vedika_panjwani/"}
+            email={"mailto:vedikapanjwani115@gmail.com"}
+          />
+          <Profile
+            name={"Adita Manthalkar"}
+            role={"Donator"}
+            icon={Aditya}
+            about={
+              "Calm, Cool and Collected. The chill guy you would go to when you feel low. Hopes for depression to be eradicated from the world,and does his best to help others against it.  "
+            }
+            insta={"https://www.instagram.com/34arinji/"}
+            email={"mailto:arinjaydhar205@gmail.com"}
+          />
+          <Profile
+            name={"Saesha Chaturvedi"}
+            role={"Manager"}
+            icon={Saesha}
+            about={
+              "Simple yet Marvelous. Always there to support all her peers, and never lets anyone feel left out. Hates holding grudges and is loved by everyone."
+            }
+            insta={"https://www.instagram.com/sash._14._/"}
+            email={"mailto:arinjaydhar205@gmail.com"}
+          />
+        </div>
+      );
+    }
+  };
   return (
     <div className="h-fit md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg">
       <div className={opacity}>
@@ -57,49 +169,20 @@ function Team() {
             onMouseOut={() => {
               setArrowLeftRotate("scale-90 hover:cursor-pointer");
             }}
+            onClick={() => {
+              if (page !== 0) {
+                const profile = document.getElementById("prf-b");
+                profile.classList.add("move-boxes-right-vanish");
+                setTimeout(() => {
+                  profile.classList.remove("move-boxes-right-vanish");
+                  setPage(page - 1);
+                }, 1000);
+              }
+            }}
           >
             <FontAwesomeIcon icon={faChevronLeft} className={arrowLeftRotate} />
           </p>
-          <Profile
-            name={"Arinjay Dhar"}
-            role={"Chief Executive Officer"}
-            icon={Arinji}
-            about={
-              "Creator of the Site, Extroverted and Excited. Loves coding in React Js and aspires to work for Google. Exceptionally bad at Hindi and has a weird American Accent. Caffeinated 24/7."
-            }
-            insta={"https://www.instagram.com/34arinji/"}
-            email={"mailto:arinjaydhar205@gmail.com"}
-          />
-          <Profile
-            name={"Vedika Panjwani"}
-            role={"Chief Operating Officer"}
-            icon={Vedika}
-            about={
-              "An ambivert, someone with whom you become friends very easily. Hardcore bollywood fan and hence adapts to the situation easily. Loves computer applications, yellow lays and the sky.  "
-            }
-            insta={"https://www.instagram.com/vedika_panjwani/"}
-            email={"mailto:vedikapanjwani115@gmail.com"}
-          />
-          <Profile
-            name={"Nilay Bagchi"}
-            role={"Chief Financial Officer"}
-            icon={Nilay}
-            about={
-              "Calm, Cool and Collected. The chill guy you would go to when you feel low. Hopes for depression to be eradicated from the world,and does his best to help others against it.  "
-            }
-            insta={"https://www.instagram.com/34arinji/"}
-            email={"mailto:arinjaydhar205@gmail.com"}
-          />
-          <Profile
-            name={"Saesha Chaturvedi"}
-            role={"Manager"}
-            icon={Saesha}
-            about={
-              "Simple yet Marvelous. Always there to support all her peers, and never lets anyone feel left out. Hates holding grudges and is loved by everyone."
-            }
-            insta={"https://www.instagram.com/sash._14._/"}
-            email={"mailto:arinjaydhar205@gmail.com"}
-          />
+          {true ? renderPage(page) : null}
           <p
             className="text-white text-2xl relative top-60 hidden md:block"
             onMouseOver={() => {
@@ -107,6 +190,14 @@ function Team() {
             }}
             onMouseOut={() => {
               setArrowRightRotate("scale-90 hover:cursor-pointer");
+            }}
+            onClick={() => {
+              const profile = document.getElementById("prf-b");
+              profile.classList.add("move-boxes-left-vanish");
+              setTimeout(() => {
+                setPage(page + 1);
+                profile.classList.remove("move-boxes-left-vanish");
+              }, 1000);
             }}
           >
             <FontAwesomeIcon
@@ -125,6 +216,16 @@ function Team() {
               onMouseOut={() => {
                 setArrowLeftRotate("scale-90 hover:cursor-pointer");
               }}
+              onClick={() => {
+                if (page !== 0) {
+                  const profile = document.getElementById("prf-b");
+                  profile.classList.add("move-boxes-right-vanish");
+                  setTimeout(() => {
+                    profile.classList.remove("move-boxes-right-vanish");
+                    setPage(page - 1);
+                  }, 1000);
+                }
+              }}
             >
               <FontAwesomeIcon
                 icon={faChevronLeft}
@@ -138,6 +239,14 @@ function Team() {
               }}
               onMouseOut={() => {
                 setArrowRightRotate("scale-90 hover:cursor-pointer");
+              }}
+              onClick={() => {
+                const profile = document.getElementById("prf-b");
+                profile.classList.add("move-boxes-left-vanish");
+                setTimeout(() => {
+                  setPage(page + 1);
+                  profile.classList.remove("move-boxes-left-vanish");
+                }, 1000);
               }}
             >
               <FontAwesomeIcon
