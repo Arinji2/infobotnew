@@ -17,7 +17,7 @@ import Vedika from "./profiles/Vedika.png";
 import Nilay from "./profiles/Nilay.png";
 import Saesha from "./profiles/Saesha.png";
 import Aryan from "./profiles/Aryan.png";
-import Unknown from "./profiles/Unknown.png";
+import Unknown from "./profiles/unknown.png";
 import Aditya from "./profiles/Aditya.png";
 function Team() {
   const [opacity, setOpacity] = useState(
