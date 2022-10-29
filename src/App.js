@@ -13,6 +13,8 @@ import WhyBoot from "./pages/why/whyBoot";
 import Why from "./pages/why/why";
 import ContactBoot from "./pages/contact/contactBoot";
 import Contact from "./pages/contact/contact";
+import TeamBoot from "./pages/team/teamBoot";
+import Team from "./pages/team/team";
 function App() {
   return (
     <div className="main">
@@ -30,6 +32,8 @@ function App() {
           <Route path="/why-Loaded" element={<Why />}></Route>
           <Route path="/contact" element={<ContactBoot />}></Route>
           <Route path="/contact-Loaded" element={<Contact />}></Route>
+          <Route path="/team" element={<TeamBoot />}></Route>
+          <Route path="/team-Loaded" element={<Team />}></Route>
         </Routes>
       </Router>
     </div>
