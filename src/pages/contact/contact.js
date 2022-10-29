@@ -15,7 +15,9 @@ function What() {
 
   useEffect(() => {
     setTimeout(() => {
-      setOpacity("opacity-100 z-20 transition-all duration-500 ease-in-out");
+      setOpacity(
+        "opacity-100 z-20 transition-all duration-500 ease-in-out m-2"
+      );
     }, 500);
   });
 
@@ -35,7 +37,7 @@ function What() {
     }
   };
   return (
-    <div className="h-fit md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg">
+    <div className="h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg">
       <div className={opacity}>
         <h1 className="text-yellow-400 os text-4xl font-extrabold text-center">
           <span className="text-white">Contact</span>{" "}
@@ -43,8 +45,8 @@ function What() {
           <span className="text-white">InfoBot</span>{" "}
         </h1>
         <div className="h-full flex flex-col items-center justify-center">
-          <div className="flex flex-row justify-evenly items-center">
-            <div className="hidden md:block w-1/3">
+          <div className="flex flex-col md:flex-row justify-evenly items-center">
+            <div className="w-3/4 md:w-1/3">
               <img src={Contact} alt="Artificial Intelligence Svg" />
             </div>
             <div className="w-fit md:w-1/2 flex flex-col md:items-center text-white text-md md:text-xl os text-center">
@@ -89,7 +91,11 @@ function What() {
                 <h2 className="text-lg md:text-2xl text-yellow-400 font-bold">
                   Looking for a Position?
                 </h2>
-                <a href="https://staff.infobot.tech" target="_blank">
+                <a
+                  href="https://staff.infobot.tech"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Custom Application System{" "}
                 </a>{" "}
                 <span>
@@ -112,6 +118,7 @@ function What() {
                 <a
                   href="https://www.trustpilot.com/review/infobot.uk"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   TrustPilot{" "}
                 </a>{" "}

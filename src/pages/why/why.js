@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/fontawesome-free-solid";
 function What() {
   const [opacity, setOpacity] = useState(
-    "opacity-0 z-20 transition-all duration-500 ease-in-out"
+    "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
   );
 
   useEffect(() => {
