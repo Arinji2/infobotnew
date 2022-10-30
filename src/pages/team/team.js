@@ -159,14 +159,14 @@ function Team() {
             }
           >
             <Profile
-              name={"Adita Manthalkar"}
+              name={"Adiyta Manthalkar"}
               role={"Donator"}
               icon={Aditya}
               about={
                 "Words cannot describe, the vibes of this legend. Feeling bored is an alien topic when around him. Aditya is the type of person to look at things and somehow give it a more, sinister meaning."
               }
               insta={"https://www.instagram.com/34arinji/"}
-              email={"mailto:arinjaydhar205@gmail.com"}
+              email={"mailto:manthalkaraditya07@gmail.com"}
             />
           </div>
         </div>
@@ -233,7 +233,7 @@ function Team() {
               setTimeout(() => {
                 setPage(page + 1);
                 setMode("fadeInRightBig");
-              }, 2400);
+              }, 2000);
             }}
           >
             <FontAwesomeIcon
@@ -258,7 +258,7 @@ function Team() {
                   setTimeout(() => {
                     setPage(page - 1);
                     setMode("fadeInLeftBig");
-                  }, 2400);
+                  }, 2000);
                 }
               }}
             >
