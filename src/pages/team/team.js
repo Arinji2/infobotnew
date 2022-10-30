@@ -17,7 +17,7 @@ import Vedika from "./profiles/Vedika.png";
 import Nilay from "./profiles/Nilay.png";
 import Saesha from "./profiles/Saesha.png";
 import Aryan from "./profiles/Aryan.png";
-import Unknown from "./profiles/unknown.png";
+import Aarav from "./profiles/Aarav.png";
 import Aditya from "./profiles/Aditya.png";
 function Team() {
   const [opacity, setOpacity] = useState(
@@ -31,7 +31,10 @@ function Team() {
     "scale-90 hover:cursor-pointer"
   );
 
+  const [mode, setMode] = useState("fadeInRightBig");
+
   const [page, setPage] = useState(0);
+  const [heading, setHeading] = useState("");
   useEffect(() => {
     setTimeout(() => {
       setOpacity("opacity-100 z-20 transition-all duration-500 ease-in-out");
@@ -45,7 +48,11 @@ function Team() {
           className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
           id="prf-b"
         >
-          <div id="prf-1">
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
+            }
+          >
             <Profile
               name={"Arinjay Dhar"}
               role={"Chief Executive Officer"}
@@ -57,7 +64,11 @@ function Team() {
               email={"mailto:arinjaydhar205@gmail.com"}
             />
           </div>
-          <div id="prf-1">
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
+            }
+          >
             <Profile
               name={"Vedika Panjwani"}
               role={"Chief Operating Officer"}
@@ -69,7 +80,11 @@ function Team() {
               email={"mailto:vedikapanjwani115@gmail.com"}
             />
           </div>
-          <div id="prf-1">
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
+            }
+          >
             <Profile
               name={"Nilay Bagchi"}
               role={"Chief Financial Officer"}
@@ -81,7 +96,11 @@ function Team() {
               email={"mailto:arinjaydhar205@gmail.com"}
             />
           </div>
-          <div id="prf-1">
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-4s"
+            }
+          >
             <Profile
               name={"Saesha Chaturvedi"}
               role={"Manager"}
@@ -102,48 +121,67 @@ function Team() {
           className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
           id="prf-b"
         >
-          <Profile
-            name={"Aryan Pandey"}
-            role={"CSO"}
-            icon={Aryan}
-            about={
-              "An Awesome Dude, Exceptionally good at Computers. Could take over the world if he wanted, but is too lazy. Can go from your best friend to your worst enemy with the snap of a finger."
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
             }
-            insta={"https://www.instagram.com/34arinji/"}
-            email={"mailto:arinjaydhar205@gmail.com"}
-          />
-          <Profile
-            name={"Aarav Mehta"}
-            role={"Donator"}
-            icon={Unknown}
-            about={
-              "Prime Example of a true friend. If one homeless person was given a home for every time Aarav is seen not smiling, homelessness would still be a thing "
+          >
+            <Profile
+              name={"Aryan Pandey"}
+              role={"CSO"}
+              icon={Aryan}
+              about={
+                "An Awesome Dude, Exceptionally good at Computers. Could take over the world if he wanted, but is too lazy. Can go from your best friend to your worst enemy with the snap of a finger."
+              }
+              insta={"https://www.instagram.com/_superscene_/"}
+              email={"mailto:ARyanpandey2307@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
             }
-            insta={"https://www.instagram.com/vedika_panjwani/"}
-            email={"mailto:vedikapanjwani115@gmail.com"}
-          />
-          <Profile
-            name={"Adita Manthalkar"}
-            role={"Donator"}
-            icon={Aditya}
-            about={
-              "Calm, Cool and Collected. The chill guy you would go to when you feel low. Hopes for depression to be eradicated from the world,and does his best to help others against it.  "
+          >
+            <Profile
+              name={"Aarav Mehta"}
+              role={"Donator"}
+              icon={Aarav}
+              about={
+                "Prime Example of a true friend. If one homeless person was given a home for every time Aarav is seen not smiling, homelessness would still be a thing "
+              }
+              insta={"https://www.instagram.com/aaravm007/"}
+              email={"mailto:mehta.aarav12345@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
             }
-            insta={"https://www.instagram.com/34arinji/"}
-            email={"mailto:arinjaydhar205@gmail.com"}
-          />
-          <Profile
-            name={"Saesha Chaturvedi"}
-            role={"Manager"}
-            icon={Saesha}
-            about={
-              "Simple yet Marvelous. Always there to support all her peers, and never lets anyone feel left out. Hates holding grudges and is loved by everyone."
-            }
-            insta={"https://www.instagram.com/sash._14._/"}
-            email={"mailto:arinjaydhar205@gmail.com"}
-          />
+          >
+            <Profile
+              name={"Adita Manthalkar"}
+              role={"Donator"}
+              icon={Aditya}
+              about={
+                "Words cannot describe, the vibes of this legend. Feeling bored is an alien topic when around him. Aditya is the type of person to look at things and somehow give it a more, sinister meaning."
+              }
+              insta={"https://www.instagram.com/34arinji/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
+            />
+          </div>
         </div>
       );
+    }
+  };
+
+  const renderHeading = (option) => {
+    switch (option) {
+      case 0:
+        return "The People who Run InfoBot";
+      case 1:
+        return "The People who Support InfoBot";
+      default:
+        return "InfoBot Team";
     }
   };
   return (
@@ -156,7 +194,7 @@ function Team() {
           <span className="text-yellow">Team</span>
         </h1>
         <h1 className="text-yellow-400 text-xl os text-center">
-          The People Who Run InfoBot
+          {true ? renderHeading(page) : null}
         </h1>
         <div className="h-full w-screen flex flex-row flex-wrap md:flex-nowrap items-start justify-evenly mt-5">
           <p
@@ -171,12 +209,11 @@ function Team() {
             }}
             onClick={() => {
               if (page !== 0) {
-                const profile = document.getElementById("prf-b");
-                profile.classList.add("move-boxes-right-vanish");
+                setMode("fadeOutRightBig");
                 setTimeout(() => {
-                  profile.classList.remove("move-boxes-right-vanish");
                   setPage(page - 1);
-                }, 1000);
+                  setMode("fadeInLeftBig");
+                }, 2400);
               }
             }}
           >
@@ -192,12 +229,11 @@ function Team() {
               setArrowRightRotate("scale-90 hover:cursor-pointer");
             }}
             onClick={() => {
-              const profile = document.getElementById("prf-b");
-              profile.classList.add("move-boxes-left-vanish");
+              setMode("fadeOutLeftBig");
               setTimeout(() => {
                 setPage(page + 1);
-                profile.classList.remove("move-boxes-left-vanish");
-              }, 1000);
+                setMode("fadeInRightBig");
+              }, 2400);
             }}
           >
             <FontAwesomeIcon
@@ -218,12 +254,11 @@ function Team() {
               }}
               onClick={() => {
                 if (page !== 0) {
-                  const profile = document.getElementById("prf-b");
-                  profile.classList.add("move-boxes-right-vanish");
+                  setMode("fadeOutRightBig");
                   setTimeout(() => {
-                    profile.classList.remove("move-boxes-right-vanish");
                     setPage(page - 1);
-                  }, 1000);
+                    setMode("fadeInLeftBig");
+                  }, 2400);
                 }
               }}
             >
@@ -241,12 +276,11 @@ function Team() {
                 setArrowRightRotate("scale-90 hover:cursor-pointer");
               }}
               onClick={() => {
-                const profile = document.getElementById("prf-b");
-                profile.classList.add("move-boxes-left-vanish");
+                setMode("fadeOutLeftBig");
                 setTimeout(() => {
                   setPage(page + 1);
-                  profile.classList.remove("move-boxes-left-vanish");
-                }, 1000);
+                  setMode("fadeInRightBig");
+                }, 2400);
               }}
             >
               <FontAwesomeIcon

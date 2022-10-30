@@ -1,7 +1,9 @@
 html {
   overflow-x: hidden;
 }
-
+:root {
+  --animate-delay: 0.5s;
+}
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   display: none;
@@ -112,7 +114,7 @@ html {
     transform: rotate(-359deg);
   }
 }
-
+/*
 .move-boxes-left-vanish {
   position: relative;
   animation: move-boxes-left-vanish 1s normal linear;
@@ -207,3 +209,4 @@ html {
     opacity: 0%;
   }
 }
+ */
