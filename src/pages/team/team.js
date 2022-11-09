@@ -19,6 +19,9 @@ import Saesha from "./profiles/Saesha.png";
 import Aryan from "./profiles/Aryan.png";
 import Aarav from "./profiles/Aarav.png";
 import Aditya from "./profiles/Aditya.png";
+import Anwesha from "./profiles/Anwesha.png";
+import Kunsh from "./profiles/Kunsh.png";
+import Unknown from "./profiles/Unknown.png";
 function Team() {
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
@@ -114,8 +117,7 @@ function Team() {
           </div>
         </div>
       );
-    }
-    if (option === 1) {
+    } else if (option === 1) {
       return (
         <div
           className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
@@ -165,8 +167,62 @@ function Team() {
               about={
                 "Words cannot describe, the vibes of this legend. Feeling bored is an alien topic when around him. Aditya is the type of person to look at things and somehow give it a more, sinister meaning."
               }
-              insta={"https://www.instagram.com/34arinji/"}
+              insta={"https://www.instagram.com/adi_cr7_officials/"}
               email={"mailto:manthalkaraditya07@gmail.com"}
+            />
+          </div>
+        </div>
+      );
+    } else if (option === 2) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
+            }
+          >
+            <Profile
+              name={"Anwesha Roy"}
+              role={"Head of Programs"}
+              icon={Anwesha}
+              about={
+                "Lazy but also Energetic when the time presents itself. Loves Coffee and could not survive without it. Loves to Gossip and is exceptionally bad at keeping secrets. But Awesome and Lovely in the end."
+              }
+              insta={"https://www.instagram.com/anweshaa_99/"}
+              email={"mailto:anweshar040@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
+            }
+          >
+            <Profile
+              name={"Kunsh Merhotra"}
+              role={"Head of Verification"}
+              icon={Kunsh}
+              about={
+                " An introvert and hilarious dude who can sometimes be creative. Co-operative to work with others and born ready to learn and try new things. Loves to play games and work out."
+              }
+              insta={"https://www.instagram.com/kunsh_mehrotra16/"}
+              email={"mailto:kunsh.mehrotra@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
+            }
+          >
+            <Profile
+              name={"Aarav Lath"}
+              role={"Head of PTO's"}
+              icon={Unknown}
+              about={"Coming Soon!"}
+              insta={"https://www.instagram.com/34arinji/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
             />
           </div>
         </div>
@@ -180,6 +236,8 @@ function Team() {
         return "The People who Run InfoBot";
       case 1:
         return "The People who Support InfoBot";
+      case 2:
+        return "The Heads of the Departments";
       default:
         return "InfoBot Team";
     }
