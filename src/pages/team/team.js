@@ -23,6 +23,7 @@ import Anwesha from "./profiles/Anwesha.png";
 import Kunsh from "./profiles/Kunsh.png";
 import Dhanvin from "./profiles/Dhanvin.png";
 import Vedant from "./profiles/Vedant.png";
+import Shreyans from "./profiles/Shreyans.png";
 function Team() {
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
@@ -220,7 +221,7 @@ function Team() {
             <Profile
               name={"Aarav Lath"}
               role={"Head of PTO's"}
-              icon={Dhanvin}
+              icon={Shreyans}
               about={"Coming Soon!"}
               insta={"https://www.instagram.com/34arinji/"}
               email={"mailto:arinjaydhar205@gmail.com"}
@@ -256,7 +257,7 @@ function Team() {
             }
           >
             <Profile
-              name={"Dhanvin"}
+              name={"Dhanvin Nair"}
               role={"Junior Developer"}
               icon={Dhanvin}
               about={
