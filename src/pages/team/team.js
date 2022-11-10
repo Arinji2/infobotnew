@@ -22,6 +22,7 @@ import Aditya from "./profiles/Aditya.png";
 import Anwesha from "./profiles/Anwesha.png";
 import Kunsh from "./profiles/Kunsh.png";
 import Dhanvin from "./profiles/Dhanvin.png";
+import Vedant from "./profiles/Vedant.png";
 function Team() {
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
@@ -227,6 +228,63 @@ function Team() {
           </div>
         </div>
       );
+    } else if (option === 3) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
+            }
+          >
+            <Profile
+              name={"Arinjay Dhar"}
+              role={"Main Developer"}
+              icon={Arinji}
+              about={
+                "Creator of the Site, Extroverted and Excited. Loves coding in React Js and aspires to work for Google. Exceptionally bad at Hindi and has a weird American Accent. Caffeinated 24/7."
+              }
+              insta={"https://www.instagram.com/34arinji/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
+            }
+          >
+            <Profile
+              name={"Dhanvin"}
+              role={"Junior Developer"}
+              icon={Dhanvin}
+              about={
+                "Extroverted and always cheerful. Loves spreading Positive Vibes. Enjoys coding and developing new things. New to the field of React. Experienced in Java."
+              }
+              insta={"https://www.instagram.com/infobotofficial/"}
+              email={"mailto:dhanvinnair11@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
+            }
+          >
+            <Profile
+              name={"Vedant Iyengar"}
+              role={"Junior Developer"}
+              icon={Vedant}
+              about={
+                "A person guided by discipline and master skills. Understanding, supportive and a true friend with an amazing sense of humor. Never fears to face what" +
+                "s coming."
+              }
+              insta={"https://www.instagram.com/infobotofficial/"}
+              email={"mailto:vedant.iyengar0307@gmail.com"}
+            />
+          </div>
+        </div>
+      );
     }
   };
 
@@ -238,6 +296,8 @@ function Team() {
         return "The People who Support InfoBot";
       case 2:
         return "The Heads of the Departments";
+      case 3:
+        return "The Developers of InfoBot";
       default:
         return "InfoBot Team";
     }
