@@ -47,7 +47,7 @@ function Team() {
   const [mode, setMode] = useState("fadeInRightBig");
 
   const [page, setPage] = useState(0);
-  const [heading, setHeading] = useState("");
+
   useEffect(() => {
     setTimeout(() => {
       setOpacity("opacity-100 z-20 transition-all duration-500 ease-in-out");

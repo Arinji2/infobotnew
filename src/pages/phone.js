@@ -12,7 +12,7 @@ function Phone() {
   useEffect(() => {
     setTimeout(() => {
       setVisibilty(
-        "relative flex flex-col h-screen opacity-100 transition-all ease-in-out duration-700"
+        "relative flex flex-col h-fit md:h-screen opacity-100 transition-all ease-in-out duration-700"
       );
     }, 500);
   });
@@ -173,7 +173,10 @@ function Phone() {
             </h1>
           </div>
           {/*Row 5 */}
-          <div className="flex flex-row flex-nowrap justify-center  w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center pb-4 absolute bottom-0">
+          <div
+            className="flex flex-row flex-nowrap justify-center  w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center pb-4 mt-5"
+            id="r-5"
+          >
             <div
               className="w-10  md:w-14 h-10 md:h-14 shadow-lg shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
               onClick={() => {
