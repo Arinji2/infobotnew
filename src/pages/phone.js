@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
 import "./pages.css";
 import Logo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,26 @@ function Phone() {
   const [visibilty, setVisibilty] = useState(
     "relative flex flex-col h-screen opacity-0"
   );
+
+  const [renders, setRenders] = useState(0);
+  const tl = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap.timeline().to(".active", {
+        zIndex: 100,
+        position: "absolute",
+        bottom: 0,
+        backgroundColor: "black",
+        width: "99%",
+        height: "99%",
+        scale: 1,
+        duration: 2,
+        color: "black",
+      });
+    });
+    return () => ctx.revert();
+  }, [renders]);
   useEffect(() => {
     setTimeout(() => {
       setVisibilty(
@@ -25,7 +46,15 @@ function Phone() {
           <div className="flex flex-row flex-wrap justify-center md:justify-evenly w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center border-b-2 border-white rounded-xl p-4 mt-4">
             <div
               className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group"
-              id="block-gray"
+              onClick={(el) => {
+                const docs = el.currentTarget;
+                docs.classList.add("active");
+                docs.innerText = "InfoBot";
+                setRenders(renders + 1);
+                setTimeout(() => {
+                  window.location.assign("/why");
+                }, 2200);
+              }}
             >
               <h1> Loops </h1>
               <h2 className="text-white md:text-2xl text-sm">Programs</h2>
