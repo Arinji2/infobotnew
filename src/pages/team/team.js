@@ -21,9 +21,17 @@ import Aarav from "./profiles/Aarav.png";
 import Aditya from "./profiles/Aditya.png";
 import Anwesha from "./profiles/Anwesha.png";
 import Kunsh from "./profiles/Kunsh.png";
+import Lath from "./profiles/Lath.png";
 import Dhanvin from "./profiles/Dhanvin.png";
 import Vedant from "./profiles/Vedant.png";
-import Shreyans from "./profiles/Shreyans.png";
+import Neel from "./profiles/Neel.png";
+import Shreshth from "./profiles/Shreshth.png";
+import Rishi from "./profiles/Rishi.png";
+import Siddhartha from "./profiles/Siddhartha.png";
+import Tashvi from "./profiles/Tashvi.png";
+import Yuvraj from "./profiles/Yuvraj.png";
+import Nikhilesh from "./profiles/Nikhilesh.png";
+
 function Team() {
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
@@ -108,7 +116,7 @@ function Team() {
           >
             <Profile
               name={"Saesha Chaturvedi"}
-              role={"Manager"}
+              role={"Human Resources Manager"}
               icon={Saesha}
               about={
                 "Simple yet Marvelous. Always there to support all her peers, and never lets anyone feel left out. Hates holding grudges and is loved by everyone."
@@ -221,9 +229,11 @@ function Team() {
             <Profile
               name={"Aarav Lath"}
               role={"Head of PTO's"}
-              icon={Shreyans}
-              about={"Coming Soon!"}
-              insta={"https://www.instagram.com/34arinji/"}
+              icon={Lath}
+              about={
+                "Organized mess. 2 words that perfectly describe him. He is extroverted and in a good mood practically all the time. Procrastination is his 2nd name."
+              }
+              insta={"https://www.instagram.com/aarav.lath/"}
               email={"mailto:arinjaydhar205@gmail.com"}
             />
           </div>
@@ -286,6 +296,191 @@ function Team() {
           </div>
         </div>
       );
+    } else if (option === 4) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
+            }
+          >
+            <Profile
+              name={"Kunsh Mehrotra"}
+              role={"Head Verifier"}
+              icon={Kunsh}
+              about={
+                "An introvert and hilarious dude who can sometimes be creative. Co-operative to work with others and born ready to learn and try new things. Loves to play games and work out.   "
+              }
+              insta={"https://www.instagram.com/kunsh_mehrotra16/"}
+              email={"mailto:kunsh.mehrotra@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
+            }
+          >
+            <Profile
+              name={"Neel Abhyankar"}
+              role={"Verifier"}
+              icon={Neel}
+              about={
+                '"A regular teen with a laptop can do anything!" thats the motto I live by. Be working on my socializing skills on the daily and helping out my friends when they need it.'
+              }
+              insta={"https://www.instagram.com/neel_abhyankar/"}
+              email={"mailto:neelabhyankar357@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
+            }
+          >
+            <Profile
+              name={"Shreshth Shetty"}
+              role={"Verifier"}
+              icon={Shreshth}
+              about={
+                "A proud foody with semi uncle jokes clogged up in the head. Quite miser but also helpful at the same time. A perfectionist who would rather spend an hour writing a title than write the project."
+              }
+              insta={"https://www.instagram.com/infobotofficial/"}
+              email={"mailto:shreshth.shetty007@gmail.com"}
+            />
+          </div>
+        </div>
+      );
+    } else if (option === 5) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
+            }
+          >
+            <Profile
+              name={"Anwesha"}
+              role={"Head of Programs"}
+              icon={Anwesha}
+              about={
+                "Lazy but also Energetic when the time presents itself. Loves Coffee and could not survive without it. Loves to Gossip and is exceptionally bad at keeping secrets. But Awesome and Lovely in the end."
+              }
+              insta={"https://www.instagram.com/anweshaa_99/"}
+              email={"mailto:anweshar040@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
+            }
+          >
+            <Profile
+              name={"Aarav"}
+              role={"Head of PTO's"}
+              icon={Lath}
+              about={
+                "Organized mess. 2 words that perfectly describe him. He is extroverted and in a good mood practically all the time. Procrastination is his 2nd name."
+              }
+              insta={"https://www.instagram.com/aarav.lath/"}
+              email={"mailto:arinjaydhar205@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
+            }
+          >
+            <Profile
+              name={"Rishi"}
+              role={"Sr Writer"}
+              icon={Rishi}
+              about={
+                "An extrovert and always cool.Understanding, supportive and a true friend. Wishes to become an entrepreneur in future.Always has your back with last minute revisions."
+              }
+              insta={"https://www.instagram.com/rishi.jasrapuria/"}
+              email={"mailto:jasrapuriarishi@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-4s"
+            }
+          >
+            <Profile
+              name={"Siddhartha"}
+              role={"Sr Writer"}
+              icon={Siddhartha}
+              about={
+                "Disciplined but also Fun. Always has your back with last minute revision. Remembers things constantly and tries to lift the heavy list of Studies from his friends."
+              }
+              insta={"https://www.instagram.com/infobotofficial/"}
+              email={"mailto:siddharthan2217@gmail.com"}
+            />
+          </div>
+        </div>
+      );
+    } else if (option === 6) {
+      return (
+        <div
+          className="flex flex-row  flex-wrap md:flex-nowrap items-center justify-center gap-5 relative"
+          id="prf-b"
+        >
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-1s"
+            }
+          >
+            <Profile
+              name={"Tashvi"}
+              role={"Jr Writer"}
+              icon={Tashvi}
+              about={
+                "Introvert, is a bit shy but when you get to know her, is a total sunshine. Annoying but fun and lives in her own fantasy. Obsessed with fictional men and romance books. A Korean devotee."
+              }
+              insta={"https://www.instagram.com/tashvidoshi/"}
+              email={"mailto:tashvidoshi@gmail.com"}
+            />
+          </div>
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-2s"
+            }
+          >
+            <Profile
+              name={"Nikhilesh"}
+              role={"Jr Writer"}
+              icon={Nikhilesh}
+              about={
+                "Joyous and Meritorious. Loves challenges and also a social bird. Can make friends with practically anyone. You can always count on him to support all your crazy ideas."
+              }
+              insta={"https://www.instagram.com/infobotofficial/"}
+              email={"mailto:nikhileshsuresh8@gmail.com"}
+            />
+          </div>
+
+          <div
+            className={
+              "animate__animated animate__" + mode + " animate__delay-3s"
+            }
+          >
+            <Profile
+              name={"Yuvraj"}
+              role={"Jr Writer"}
+              icon={Yuvraj}
+              about={
+                "Man with a vision, wishes to become an entrepreneur.Got simple hobbies of a twenty year old like jogging and watching anime. Always interested in big projects. Friendly, humble and sweet."
+              }
+              insta={"https://www.instagram.com/yuvikedia_19/"}
+              email={"mailto:yuvrajkedia07@gmail.com"}
+            />
+          </div>
+        </div>
+      );
     }
   };
 
@@ -299,8 +494,12 @@ function Team() {
         return "The Heads of the Departments";
       case 3:
         return "The Developers of InfoBot";
+      case 4:
+        return "The Verifiers of InfoBot";
+      case 5:
+        return "The Writers of InfoBot";
       default:
-        return "InfoBot Team";
+        return "The Writers of InfoBot";
     }
   };
   return (
@@ -348,11 +547,13 @@ function Team() {
               setArrowRightRotate("scale-90 hover:cursor-pointer");
             }}
             onClick={() => {
-              setMode("fadeOutLeftBig");
-              setTimeout(() => {
-                setPage(page + 1);
-                setMode("fadeInRightBig");
-              }, 2000);
+              if (page !== 6) {
+                setMode("fadeOutLeftBig");
+                setTimeout(() => {
+                  setPage(page + 1);
+                  setMode("fadeInRightBig");
+                }, 2000);
+              }
             }}
           >
             <FontAwesomeIcon
@@ -395,11 +596,13 @@ function Team() {
                 setArrowRightRotate("scale-90 hover:cursor-pointer");
               }}
               onClick={() => {
-                setMode("fadeOutLeftBig");
-                setTimeout(() => {
-                  setPage(page + 1);
-                  setMode("fadeInRightBig");
-                }, 2400);
+                if (page !== 6) {
+                  setMode("fadeOutLeftBig");
+                  setTimeout(() => {
+                    setPage(page + 1);
+                    setMode("fadeInRightBig");
+                  }, 2400);
+                }
               }}
             >
               <FontAwesomeIcon
