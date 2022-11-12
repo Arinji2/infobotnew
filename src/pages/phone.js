@@ -12,14 +12,14 @@ function Phone() {
   useEffect(() => {
     setTimeout(() => {
       setVisibilty(
-        "relative flex flex-col h-fit md:h-screen opacity-100 transition-all ease-in-out duration-700"
+        "relative flex flex-col h-screen md:h-screen opacity-100 transition-all ease-in-out duration-700"
       );
     }, 500);
   });
 
   return (
     <div className="flex flex-col justify-center items-center h-screen relative w-full bg-neutral-800 text-center">
-      <div className="h-screen w-screen border-4 border-white flex items-center justify-center rounded-lg p-2 md:m-10 md:w-full bg z-30">
+      <div className="h-screen w-screen border-4 border-white flex items-center justify-center rounded-lg p-2 md:m-10 md:w-full bg z-30 absolute">
         <div className={visibilty}>
           {/*Row 1 */}
           <div className="flex flex-row flex-wrap justify-center md:justify-evenly w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center border-b-2 border-white rounded-xl p-4 mt-4">

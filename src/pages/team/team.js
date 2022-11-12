@@ -400,7 +400,7 @@ function Team() {
               role={"Sr Writer"}
               icon={Rishi}
               about={
-                "An extrovert and always cool.Understanding, supportive and a true friend. Wishes to become an entrepreneur in future.Always has your back with last minute revisions."
+                "An extrovert and always cool. Understanding, supportive and a true friend. Wishes to become an entrepreneur in future.Always has your back with last minute revisions."
               }
               insta={"https://www.instagram.com/rishi.jasrapuria/"}
               email={"mailto:jasrapuriarishi@gmail.com"}
