@@ -53,7 +53,7 @@ function Phone() {
                 setRenders(renders + 1);
                 setTimeout(() => {
                   window.location.assign("/why");
-                }, 2200);
+                }, 2000);
               }}
             >
               <h1> Loops </h1>
