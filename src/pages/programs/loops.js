@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { db } from "../../firebase.config";
-import { Oval } from "react-loader-spinner";
+
 import { getDoc, doc } from "firebase/firestore";
 function Loops() {
   const [title, setTitle] = useState("");
@@ -9,7 +9,6 @@ function Loops() {
   const [explanation, setExplanation] = useState("");
   const [logic, setLogic] = useState("");
   const [ready, setReady] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
   );
@@ -37,7 +36,6 @@ function Loops() {
     setExplanation(docSnap.data().explanation);
     setLogic(docSnap.data().logic);
     setReady(true);
-    setLoading(false);
   };
 
   const formatResult = (item) => {
