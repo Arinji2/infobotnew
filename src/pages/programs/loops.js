@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { db } from "../../firebase.config";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faArrowAltCircleLeft,
+} from "@fortawesome/fontawesome-free-solid";
 import { getDoc, doc } from "firebase/firestore";
 function Loops() {
   const [title, setTitle] = useState("");
@@ -60,24 +64,8 @@ function Loops() {
   };
   function Input() {
     return (
-      <div className="">
-        <div
-          className="hidden md:block"
-          style={{
-            marginBottom: 20,
-            width: 500,
-            backgroundColor: "#facc15",
-          }}
-        ></div>
-        <div
-          className="block md:hidden"
-          style={{
-            marginBottom: 20,
-            width: 300,
-            backgroundColor: "#facc15",
-          }}
-        ></div>
-        <div className="os">
+      <div className="flex flex-col items-center justify-center m-5">
+        <div className="hidden md:block" style={{ width: 400 }}>
           <ReactSearchAutocomplete
             items={data}
             styling={{
@@ -91,6 +79,24 @@ function Loops() {
             formatResult={formatResult}
             onSelect={onSelect}
             onSearch={onSelect}
+            placeholder="Armstrong"
+          />
+        </div>
+        <div className="block md:hidden" style={{ width: 300 }}>
+          <ReactSearchAutocomplete
+            items={data}
+            styling={{
+              zIndex: 4,
+              color: "#facc15",
+              fontFamily: "Silkscreen",
+              backgroundColor: "black",
+              hoverBackgroundColor: "#262626",
+            }}
+            autoFocus
+            formatResult={formatResult}
+            onSelect={onSelect}
+            onSearch={onSelect}
+            placeholder="Armstrong"
           />
         </div>
       </div>
@@ -108,6 +114,10 @@ function Loops() {
         <div className={opacity}>
           <div className="text-white z-30">
             <div>
+              <h1 className="text-yellow-400 os text-4xl text-center">Loops</h1>
+              <h2 className="text-white os text-2xl text-center">
+                Powered by InfoBot
+              </h2>
               <Input />
               {ready ? (
                 <Post
@@ -117,7 +127,82 @@ function Loops() {
                   logic={logic}
                 />
               ) : (
-                <></>
+                <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center os mt-4 gap-9 md:gap-10 md:w-2/4 text-center">
+                    <h1 className="text-white text-2xl">
+                      Type to Start Searching!
+                    </h1>
+
+                    <h2 className="text-2xl text-yellow-400">
+                      How does the InfoBot Search Work?
+                    </h2>
+
+                    <p>
+                      Just start typing in the Search Box with keywords related
+                      to the topic and watch InfoBot suggest you other keywords
+                      based on what you type.
+                    </p>
+                    <div className="">
+                      <h3 className="text-md md:text-xl text-green-400">
+                        Each Program is setup in the following Format
+                      </h3>
+                      <div className="flex flex-row items-center justify-evenly gap-4 flex-wrap ">
+                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                          <span className="text-yellow-400">1.</span>Title
+                        </h1>
+
+                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                          <span className="text-yellow-400">2.</span>Explanation
+                        </h1>
+                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                          <span className="text-yellow-400">3.</span>Code
+                        </h1>
+                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                          <span className="text-yellow-400">4.</span>Logic
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {ready ? (
+                <div className=" md:relative mt-10 w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2 border-4 border-white rounded-lg md:p-0 md:border-0 md:border-none">
+                  <p
+                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+                    onClick={() => {
+                      window.history.back();
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                  </p>
+                  <p
+                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+                    onClick={() => {
+                      window.location.assign("/phone");
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faHome} />
+                  </p>
+                </div>
+              ) : (
+                <div className=" md:fixed md:bottom-10 w-screen flex flex-row justify-evenly md:gap-5 text-white text-2xl p-2 border-4 border-white rounded-lg md:p-0 md:border-0 md:border-none">
+                  <p
+                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+                    onClick={() => {
+                      window.history.back();
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                  </p>
+                  <p
+                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
+                    onClick={() => {
+                      window.location.assign("/phone");
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faHome} />
+                  </p>
+                </div>
               )}
             </div>
           </div>
