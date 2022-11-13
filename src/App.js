@@ -15,6 +15,7 @@ import ContactBoot from "./pages/contact/contactBoot";
 import Contact from "./pages/contact/contact";
 import TeamBoot from "./pages/team/teamBoot";
 import Team from "./pages/team/team";
+import Loops from "./pages/programs/loops";
 function App() {
   return (
     <div className="main">
@@ -34,6 +35,7 @@ function App() {
           <Route path="/contact-Loaded" element={<Contact />}></Route>
           <Route path="/team" element={<TeamBoot />}></Route>
           <Route path="/team-Loaded" element={<Team />}></Route>
+          <Route path="/loops" element={<Loops />}></Route>
         </Routes>
       </Router>
     </div>
