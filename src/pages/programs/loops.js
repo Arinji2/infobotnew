@@ -140,27 +140,28 @@ function Loops() {
                     </p>
                     <div className="">
                       <h3 className="text-md md:text-xl text-green-400">
-                        Each Program is setup in the following Format
+                        Each Program is setup in the following Format <br />{" "}
+                        (Ps: Take Note of the different Shades)
                       </h3>
                       <div className="flex flex-row items-center justify-evenly gap-4 flex-wrap ">
                         <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-400">1.</span>Title
+                          <span className="text-yellow-500">1.</span>Title
                         </h1>
 
                         <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
                           <span className="text-yellow-400">2.</span>Explanation
                         </h1>
                         <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-400">3.</span>Code
+                          <span className="text-yellow-300">3.</span>Code
                         </h1>
                         <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-400">4.</span>Logic
+                          <span className="text-yellow-200">4.</span>Logic
                         </h1>
                       </div>
                     </div>
                     <div className="hidden  w-[90vw] md:flex flex-row items-center gap-4 ">
                       <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-400 text-xl">Title</h2>
+                        <h2 className="text-yellow-500 text-xl">Title</h2>
                         <p>
                           The Title of the Program is the Name of it. For easier
                           access the Keyword for InfoBot Search is the title of
@@ -175,7 +176,7 @@ function Loops() {
                         </p>
                       </div>
                       <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-400 text-xl">Code</h2>
+                        <h2 className="text-yellow-300 text-xl">Code</h2>
                         <p>
                           The Code is the Java Code which solves the program. It
                           is all checked and re checked so feel free to just
@@ -183,7 +184,7 @@ function Loops() {
                         </p>
                       </div>
                       <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-400 text-xl">Logic</h2>
+                        <h2 className="text-yellow-200 text-xl">Logic</h2>
                         <p>
                           The Logic of the Program are the methods and steps
                           taken to solve the program by the writers.
@@ -204,22 +205,22 @@ function Loops() {
 function Post({ title, code, explanation, logic }) {
   return (
     <div className="flex flex-col items-center justify-center gap-5">
-      <div className="os flex flex-col items-center justify-center w-4/5 gap-7 text-yellow-400">
+      <div className="os flex flex-col items-center justify-center w-4/5 gap-7">
         <h1
-          className="text-2xl md:text-3xl text-center  "
+          className="text-2xl md:text-3xl text-center  text-yellow-500 "
           dangerouslySetInnerHTML={{ __html: title }}
         ></h1>
         <h1
-          className="text-sm md:text-xl text-center "
+          className="text-sm md:text-xl text-center  text-yellow-400 "
           dangerouslySetInnerHTML={{ __html: explanation }}
         ></h1>
         <h1
-          className=" text-sm bg-black p-5 rounded-lg text-white"
+          className=" text-sm bg-black p-5 rounded-lg  text-yellow-300"
           dangerouslySetInnerHTML={{ __html: code }}
         ></h1>
 
         <h1
-          className="text-sm md:text-lg text-center "
+          className="text-sm md:text-lg text-center  text-yellow-200 "
           dangerouslySetInnerHTML={{ __html: logic }}
         ></h1>
       </div>
