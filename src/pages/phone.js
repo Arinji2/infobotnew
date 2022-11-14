@@ -20,11 +20,14 @@ function Phone() {
         zIndex: 100,
         position: "absolute",
         bottom: 0,
-        width: "99%",
-        height: "99%",
+        width: "100%",
+        height: "100%",
         scale: 1,
         duration: 2,
         color: "white",
+        borderWidth: "4px",
+        borderColor: "white",
+        borderRadius: "0.5rem",
       });
     });
     return () => ctx.revert();
