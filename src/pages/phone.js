@@ -49,7 +49,7 @@ function Phone() {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
                 docs.classList.add("bg");
-                docs.innerText = "InfoBot";
+                docs.innerText = "";
                 setRenders(renders + 1);
                 setTimeout(() => {
                   window.location.assign("/loops");
