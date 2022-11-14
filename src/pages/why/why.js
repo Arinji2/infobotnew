@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../pages.css";
 import What2 from "../../assets/what2.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faArrowAltCircleLeft,
-} from "@fortawesome/fontawesome-free-solid";
+
 function What() {
   const [opacity, setOpacity] = useState(
     "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"

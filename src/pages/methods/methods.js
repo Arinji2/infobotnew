@@ -3,7 +3,7 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { db } from "../../firebase.config";
 
 import { getDoc, doc } from "firebase/firestore";
-function Loops() {
+function Methods() {
   const [title, setTitle] = useState("");
   const [code, setCode] = useState("");
   const [explanation, setExplanation] = useState("");
@@ -21,13 +21,13 @@ function Loops() {
     }, 500);
   }, []);
   const getLocations = async () => {
-    const docRef = doc(db, "locations", "loops");
+    const docRef = doc(db, "locations", "methods");
     const docSnap = await getDoc(docRef);
     setData(docSnap.data().paths);
   };
 
   const getFile = async (text) => {
-    const docRef = doc(db, "loops", text);
+    const docRef = doc(db, "methods", text);
     const docSnap = await getDoc(docRef);
     setTitle(docSnap.data().title);
     setCode(docSnap.data().code);
@@ -73,7 +73,8 @@ function Loops() {
             formatResult={formatResult}
             onSelect={onSelect}
             onSearch={onSelect}
-            placeholder="Armstrong"
+            placeholder="HcfLcm"
+            maxResults={10}
           />
         </div>
         <div className="block md:hidden" style={{ width: 300 }}>
@@ -90,8 +91,7 @@ function Loops() {
             formatResult={formatResult}
             onSelect={onSelect}
             onSearch={onSelect}
-            placeholder="Armstrong"
-            maxResults={10}
+            placeholder="Overload"
           />
         </div>
       </div>
@@ -109,7 +109,9 @@ function Loops() {
         <div className={opacity}>
           <div className="text-white z-30">
             <div>
-              <h1 className="text-yellow-400 os text-4xl text-center">Loops</h1>
+              <h1 className="text-yellow-400 os text-4xl text-center">
+                Methods
+              </h1>
               <h2 className="text-white os text-2xl text-center">
                 Powered by InfoBot
               </h2>
@@ -227,4 +229,4 @@ function Post({ title, code, explanation, logic }) {
   );
 }
 
-export default Loops;
+export default Methods;

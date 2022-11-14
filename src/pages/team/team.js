@@ -3,8 +3,6 @@ import "../pages.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
-  faArrowAltCircleLeft,
   faEnvelope,
   faChevronRight,
   faChevronLeft,

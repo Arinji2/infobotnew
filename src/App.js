@@ -17,6 +17,8 @@ import TeamBoot from "./pages/team/teamBoot";
 import Team from "./pages/team/team";
 import LoopsBoot from "./pages/loops/loopsBoot";
 import Loops from "./pages/loops/loops";
+import MethodsBoot from "./pages/methods/methodsBoot";
+import Methods from "./pages/methods/methods";
 import Footer from "./components/footer";
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
           <Route path="/team-Loaded" element={<Team />}></Route>
           <Route path="/loops" element={<LoopsBoot />}></Route>
           <Route path="/loops-Loaded" element={<Loops />}></Route>
+          <Route path="/methods" element={<MethodsBoot />}></Route>
+          <Route path="/methods-Loaded" element={<Methods />}></Route>
         </Routes>
       </Router>
 

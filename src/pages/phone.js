@@ -68,7 +68,16 @@ function Phone() {
             </div>
             <div
               className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
-              id="block-gray"
+              onClick={(el) => {
+                const docs = el.currentTarget;
+                docs.classList.add("active");
+                docs.classList.add("bg");
+                docs.innerText = "";
+                setRenders(renders + 1);
+                setTimeout(() => {
+                  window.location.assign("/methods");
+                }, 2000);
+              }}
             >
               <h1> Methods </h1>
               <h2 className="text-white md:text-2xl text-sm">Programs</h2>
