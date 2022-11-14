@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { db } from "../../firebase.config";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faArrowAltCircleLeft,
-} from "@fortawesome/fontawesome-free-solid";
+
 import { getDoc, doc } from "firebase/firestore";
 function Loops() {
   const [title, setTitle] = useState("");
@@ -108,7 +104,7 @@ function Loops() {
         className={
           ready
             ? "h-fit w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
-            : "h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
+            : "h-fit md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
         }
       >
         <div className={opacity}>
@@ -128,7 +124,7 @@ function Loops() {
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center">
-                  <div className="flex flex-col items-center justify-center os mt-4 gap-9 md:gap-10 md:w-2/4 text-center">
+                  <div className="flex flex-col items-center justify-center os m-4 gap-9  md:w-2/4 text-center">
                     <h1 className="text-white text-2xl">
                       Type to Start Searching!
                     </h1>
@@ -162,46 +158,39 @@ function Loops() {
                         </h1>
                       </div>
                     </div>
+                    <div className="hidden  w-[90vw] md:flex flex-row items-center gap-4 ">
+                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                        <h2 className="text-yellow-400 text-xl">Title</h2>
+                        <p>
+                          The Title of the Program is the Name of it. For easier
+                          access the Keyword for InfoBot Search is the title of
+                          the Program.
+                        </p>
+                      </div>
+                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                        <h2 className="text-yellow-400 text-xl">Explanation</h2>
+                        <p>
+                          The Explanation of the Program gives an overview of
+                          what the Question wants us to do.
+                        </p>
+                      </div>
+                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                        <h2 className="text-yellow-400 text-xl">Code</h2>
+                        <p>
+                          The Code is the Java Code which solves the program. It
+                          is all checked and re checked so feel free to just
+                          copy paste it.
+                        </p>
+                      </div>
+                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                        <h2 className="text-yellow-400 text-xl">Logic</h2>
+                        <p>
+                          The Logic of the Program are the methods and steps
+                          taken to solve the program by the writers.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              )}
-              {ready ? (
-                <div className=" md:relative mt-10 w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2 border-4 border-white rounded-lg md:p-0 md:border-0 md:border-none">
-                  <p
-                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-                    onClick={() => {
-                      window.history.back();
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-                  </p>
-                  <p
-                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-                    onClick={() => {
-                      window.location.assign("/phone");
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faHome} />
-                  </p>
-                </div>
-              ) : (
-                <div className=" md:fixed md:bottom-10 w-screen flex flex-row justify-evenly md:gap-5 text-white text-2xl p-2 border-4 border-white rounded-lg md:p-0 md:border-0 md:border-none">
-                  <p
-                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-                    onClick={() => {
-                      window.history.back();
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-                  </p>
-                  <p
-                    className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-                    onClick={() => {
-                      window.location.assign("/phone");
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faHome} />
-                  </p>
                 </div>
               )}
             </div>

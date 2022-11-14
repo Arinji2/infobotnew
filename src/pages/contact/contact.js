@@ -137,24 +137,6 @@ function What() {
               </div>
             </div>
           </div>
-          <div className="md:fixed bottom-5 w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2 border-4 border-white rounded-lg md:p-0 md:border-0 md:border-none">
-            <p
-              className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-              onClick={() => {
-                window.history.back();
-              }}
-            >
-              <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-            </p>
-            <p
-              className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
-              onClick={() => {
-                window.location.assign("/phone");
-              }}
-            >
-              <FontAwesomeIcon icon={faHome} />
-            </p>
-          </div>
         </div>
       </div>
     </div>

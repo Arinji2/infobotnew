@@ -16,9 +16,10 @@ import Contact from "./pages/contact/contact";
 import TeamBoot from "./pages/team/teamBoot";
 import Team from "./pages/team/team";
 import Loops from "./pages/programs/loops";
+import Footer from "./components/footer";
 function App() {
   return (
-    <div className="main">
+    <div className="main h-screen">
       <Screen />
       <Router>
         <Routes>
@@ -38,6 +39,8 @@ function App() {
           <Route path="/loops" element={<Loops />}></Route>
         </Routes>
       </Router>
+
+      <Footer />
     </div>
   );
 }
