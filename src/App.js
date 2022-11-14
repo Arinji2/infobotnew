@@ -15,7 +15,8 @@ import ContactBoot from "./pages/contact/contactBoot";
 import Contact from "./pages/contact/contact";
 import TeamBoot from "./pages/team/teamBoot";
 import Team from "./pages/team/team";
-import Loops from "./pages/programs/loops";
+import LoopsBoot from "./pages/loops/loopsBoot";
+import Loops from "./pages/loops/loops";
 import Footer from "./components/footer";
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
           <Route path="/contact-Loaded" element={<Contact />}></Route>
           <Route path="/team" element={<TeamBoot />}></Route>
           <Route path="/team-Loaded" element={<Team />}></Route>
-          <Route path="/loops" element={<Loops />}></Route>
+          <Route path="/loops" element={<LoopsBoot />}></Route>
+          <Route path="/loops-Loaded" element={<Loops />}></Route>
         </Routes>
       </Router>
 

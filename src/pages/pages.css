@@ -17,6 +17,12 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.icon {
+  top: 60%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
 .bg {
   background-image: url("../assets/phone.png");
   background-position-x: center;

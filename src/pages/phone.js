@@ -20,12 +20,11 @@ function Phone() {
         zIndex: 100,
         position: "absolute",
         bottom: 0,
-        backgroundColor: "black",
         width: "99%",
         height: "99%",
         scale: 1,
         duration: 2,
-        color: "black",
+        color: "white",
       });
     });
     return () => ctx.revert();
@@ -49,10 +48,11 @@ function Phone() {
               onClick={(el) => {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
+                docs.classList.add("bg");
                 docs.innerText = "InfoBot";
                 setRenders(renders + 1);
                 setTimeout(() => {
-                  window.location.assign("/why");
+                  window.location.assign("/loops");
                 }, 2000);
               }}
             >
