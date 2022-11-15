@@ -19,6 +19,10 @@ import LoopsBoot from "./pages/loops/loopsBoot";
 import Loops from "./pages/loops/loops";
 import MethodsBoot from "./pages/methods/methodsBoot";
 import Methods from "./pages/methods/methods";
+import ArraysBoot from "./pages/arrays/arraysBoot";
+import Arrays from "./pages/arrays/arrays";
+import StringsBoot from "./pages/strings/stringsBoot";
+import Strings from "./pages/strings/strings";
 import Footer from "./components/footer";
 function App() {
   return (
@@ -43,6 +47,10 @@ function App() {
           <Route path="/loops-Loaded" element={<Loops />}></Route>
           <Route path="/methods" element={<MethodsBoot />}></Route>
           <Route path="/methods-Loaded" element={<Methods />}></Route>
+          <Route path="/arrays" element={<ArraysBoot />}></Route>
+          <Route path="/arrays-Loaded" element={<Arrays />}></Route>
+          <Route path="/strings" element={<StringsBoot />}></Route>
+          <Route path="/strings-Loaded" element={<Strings />}></Route>
         </Routes>
       </Router>
 

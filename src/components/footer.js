@@ -7,7 +7,7 @@ import {
 function Footer() {
   return (
     <React.Fragment>
-      <div className=" static bottom-0 w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2  z-30 border-4 border-white md:border-t-4">
+      <div className=" static bottom-0 w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2  z-50 border-4 border-white md:border-t-4">
         <p
           className="text-white scale-90 hover:scale-100 transition-all ease-in-out duration-300 hover:cursor-pointer"
           onClick={() => {
