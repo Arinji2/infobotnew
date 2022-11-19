@@ -57,6 +57,8 @@ function Auth() {
           setErrorMessage("Weak Password");
         else if (error.code === "auth/internal-error")
           setErrorMessage("An Internal Error has Occurred, Try again later");
+        else if (error.code === "auth/invalid-email")
+          setErrorMessage("Email Invalid, Please try Again");
         else setErrorMessage(error.code);
       });
   };
