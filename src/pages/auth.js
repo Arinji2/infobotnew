@@ -1,13 +1,11 @@
 import { Oval } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 import "./pages.css";
-import Logo from "../assets/logo.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { auth, db } from "../firebase.config";
 import {
-  FacebookAuthProvider,
   GoogleAuthProvider,
   signInWithPopup,
   signInWithEmailAndPassword,
@@ -96,17 +94,6 @@ function Auth() {
       });
   };
 
-  const loginwithFacebook = () => {
-    const facebookProvider = new FacebookAuthProvider();
-    signInWithPopup(auth, facebookProvider)
-      .then(() => {
-        getDocs();
-      })
-      .catch((error) => {
-        console.log("Error" + error);
-      });
-  };
-
   const getDocs = async () => {
     const docRef = doc(db, "users", auth.currentUser.uid);
     const docSnap = await getDoc(docRef);
@@ -124,6 +111,12 @@ function Auth() {
         email: auth.currentUser.email,
         uid: auth.currentUser.uid,
         staff: false,
+        writer: false,
+        verifier: false,
+        developer: false,
+        executive: false,
+        coins: 0,
+        premium: false,
         userName: auth.currentUser.displayName,
       })
         .then(() => {
@@ -146,7 +139,13 @@ function Auth() {
       email: auth.currentUser.email,
       uid: auth.currentUser.uid,
       staff: false,
-      userName: username,
+      writer: false,
+      verifier: false,
+      developer: false,
+      executive: false,
+      coins: 0,
+      premium: false,
+      userName: auth.currentUser.displayName,
     })
       .then(() => {
         setError(false);
@@ -226,12 +225,7 @@ function Auth() {
           >
             <FontAwesomeIcon icon={faGoogle} className="" /> Login with Google
           </button>
-          <button
-            className="os mt-5 text-xl  hover:bg-white scale-100 bg-yellow-500  text-white hover:text-yellow-500 rounded-lg p-3 transition-all ease-in-out duration-300"
-            onClick={loginwithFacebook}
-          >
-            <FontAwesomeIcon icon={faFacebook} className="" /> Login with Meta
-          </button>
+
           <div className="flex flex-col items-center gap-5">
             <div className="relative top-10 h-28 w-32"></div>
           </div>
