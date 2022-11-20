@@ -33,10 +33,27 @@ function Strings() {
     console.log(text);
     console.log(docSnap.exists());
     setTitle(docSnap.data().title);
-    setCode(docSnap.data().code);
+    formatCode(docSnap.data().code);
     setExplanation(docSnap.data().explanation);
     setLogic(docSnap.data().logic);
     setReady(true);
+  };
+
+  const formatCode = (code) => {
+    let formattedCode = "";
+    for (let i = 0; i < code.length; i++) {
+      let letter = code.charAt(i);
+      if (letter === "{") {
+        formattedCode += '<span class="text-green-400">{</span>';
+      } else if (letter === "}") {
+        formattedCode += '<span class="text-red-400">}</span>';
+      } else if (letter === ";") {
+        formattedCode += '<span class="text-blue-400">;</span>';
+      } else if (letter === ")" || letter === "(") {
+        formattedCode += `<span class="text-yellow-400">${letter}</span>`;
+      } else formattedCode += letter;
+    }
+    setCode(formattedCode);
   };
 
   const formatResult = (item) => {

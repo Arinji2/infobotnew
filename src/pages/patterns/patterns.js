@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase.config";
 import { getDoc, doc } from "firebase/firestore";
+import { Oval } from "react-loader-spinner";
 
 import "../pages.css";
 function Patterns() {
@@ -21,10 +22,10 @@ function Patterns() {
 
   useEffect(() => {
     if (choice !== "") checkChoice();
+    // eslint-disable-next-line
   }, [choice]);
   const checkChoice = async () => {
     var docRef = doc(db, "locations", "patterns");
-    const dataConst = await getDoc(docRef);
     const num = data.indexOf(choice).toString();
     docRef = doc(db, "patterns", num);
     const file = await getDoc(docRef);
@@ -36,10 +37,20 @@ function Patterns() {
   };
 
   const formatCode = (code) => {
-    code = code.replaceAll("<p>{</p>", '<p class="text-green-500">{</p>');
-    code = code.replaceAll("<p>}</p>", '<p class="text-red-500">}</p>');
-
-    setCode(code);
+    let formattedCode = "";
+    for (let i = 0; i < code.length; i++) {
+      let letter = code.charAt(i);
+      if (letter === "{") {
+        formattedCode += '<span class="text-green-400">{</span>';
+      } else if (letter === "}") {
+        formattedCode += '<span class="text-red-400">}</span>';
+      } else if (letter === ";") {
+        formattedCode += '<span class="text-blue-400">;</span>';
+      } else if (letter === ")" || letter === "(") {
+        formattedCode += `<span class="text-yellow-400">${letter}</span>`;
+      } else formattedCode += letter;
+    }
+    setCode(formattedCode);
   };
 
   return (
@@ -52,7 +63,18 @@ function Patterns() {
     >
       <h1 className="text-yellow-400 os text-4xl text-center">Loops</h1>
       <h2 className="text-white os text-2xl text-center">Powered by InfoBot</h2>
-
+      {data.length > 0 ? (
+        <></>
+      ) : (
+        <div className="h-screen w-screen flex flex-col items-center justify-center">
+          <Oval
+            color="yellow"
+            secondaryColor="transparent"
+            height="200"
+            width="200"
+          />
+        </div>
+      )}
       <div
         className={
           file
