@@ -30,12 +30,18 @@ function Loops() {
     const docRef = doc(db, "loops", text);
     const docSnap = await getDoc(docRef);
     setTitle(docSnap.data().title);
-    setCode(docSnap.data().code);
+    formatCode(docSnap.data().code)
     setExplanation(docSnap.data().explanation);
     setLogic(docSnap.data().logic);
     setReady(true);
   };
 
+const formatCode = (code) => {
+    code = code.replaceAll("<p>{</p>", '<p class="text-green-500">{</p>');
+    code = code.replaceAll("<p>}</p>", '<p class="text-red-500">}</p>');
+
+    setCode(code);
+  };
   const formatResult = (item) => {
     return (
       <>
