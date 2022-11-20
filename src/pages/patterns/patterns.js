@@ -41,9 +41,9 @@ function Patterns() {
     for (let i = 0; i < code.length; i++) {
       let letter = code.charAt(i);
       if (letter === "{") {
-        formattedCode += '<span class="text-green-400">{</span>';
+        formattedCode += '<div class="text-green-400">{</div>';
       } else if (letter === "}") {
-        formattedCode += '<span class="text-red-400">}</span>';
+        formattedCode += '<div class="text-red-400">}</div>';
       } else if (letter === ";") {
         formattedCode += '<span class="text-blue-400">;</span>';
       } else if (letter === ")" || letter === "(") {
@@ -85,7 +85,7 @@ function Patterns() {
         {data.map((item) => {
           return (
             <li
-              className="text-white list-none bg-black p-2 rounded-lg w-28 h-38 z-30 text-xl hover:cursor-pointer scale-90 hover:scale-100 hover:shadow-lg hover:shadow-black transition-all ease-in-out duration-300"
+              className="text-white list-none bg-black p-2 rounded-lg w-fit h-fit z-30 text-xl hover:cursor-pointer scale-90 hover:scale-100 hover:shadow-lg hover:shadow-black transition-all ease-in-out duration-300"
               dangerouslySetInnerHTML={{ __html: item }}
               key={item}
               onClick={() => {
@@ -113,7 +113,7 @@ function Post({ code, display, logic, setFile, setChoice }) {
     <div className="flex flex-col items-center justify-center gap-5 ">
       <div className="os flex flex-col items-center justify-center w-4/5 gap-7 ">
         <h1
-          className="text-2xl md:text-3xl text-center  text-yellow-500 shadow-md shadow-black z-50 p-2 rounded-lg"
+          className="text-2xl md:text-3xl text-left  text-yellow-500 shadow-md shadow-black z-50 p-2 rounded-lg"
           dangerouslySetInnerHTML={{ __html: display }}
         ></h1>
         <h1

@@ -41,9 +41,9 @@ function Methods() {
     for (let i = 0; i < code.length; i++) {
       let letter = code.charAt(i);
       if (letter === "{") {
-        formattedCode += '<span class="text-green-400">{</span>';
+        formattedCode += '<div class="text-green-400">{</div>';
       } else if (letter === "}") {
-        formattedCode += '<span class="text-red-400">}</span>';
+        formattedCode += '<div class="text-red-400">}</div>';
       } else if (letter === ";") {
         formattedCode += '<span class="text-blue-400">;</span>';
       } else if (letter === ")" || letter === "(") {
