@@ -1,8 +1,7 @@
 import { Triangle } from "react-loader-spinner";
 import React, { useState, useEffect } from "react";
 import "../pages.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfinity } from "@fortawesome/fontawesome-free-solid";
+import { Icon } from "@iconify/react";
 function Boot() {
   const [isBooting, setIsBooting] = useState(true);
   const [visibilty, setVisibilty] = useState(
@@ -16,7 +15,7 @@ function Boot() {
         );
         setTimeout(() => {
           setIsBooting(false);
-          window.location.assign("/loops-Loaded");
+          window.location.assign("/patterns-Loaded");
         }, 1000);
       }, 2000);
     }
@@ -32,12 +31,12 @@ function Boot() {
           {isBooting ? loaderChoice(1) : loaderChoice(0)}
         </div>
         <div className="icon absolute text-white text-7xl">
-          <FontAwesomeIcon icon={faInfinity} />
+          <Icon icon="bxs:shapes" />
         </div>
 
         <div className="icon text-center absolute text-white w-1/4 h-1/4"></div>
         <h1 className="text-white text-2xl md:text-4xl os font-bold text-center">
-          <span className="text-yellow-400">Loops</span> Is Starting
+          <span className="text-yellow-400">Patterns</span> Is Starting
         </h1>
       </div>
     </div>

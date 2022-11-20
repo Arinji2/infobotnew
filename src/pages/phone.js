@@ -23,7 +23,7 @@ function Phone() {
         width: "100%",
         height: "100%",
         scale: 1,
-        duration: 2,
+        duration: 1.5,
         color: "white",
         borderWidth: "4px",
         borderColor: "white",
@@ -56,7 +56,7 @@ function Phone() {
                 setRenders(renders + 1);
                 setTimeout(() => {
                   window.location.assign("/loops");
-                }, 2000);
+                }, 1500);
               }}
             >
               <h1> Loops </h1>
@@ -76,7 +76,7 @@ function Phone() {
                 setRenders(renders + 1);
                 setTimeout(() => {
                   window.location.assign("/methods");
-                }, 2000);
+                }, 1500);
               }}
             >
               <h1> Methods </h1>
@@ -96,7 +96,7 @@ function Phone() {
                 setRenders(renders + 1);
                 setTimeout(() => {
                   window.location.assign("/strings");
-                }, 2000);
+                }, 1500);
               }}
             >
               <h1> Strings </h1>
@@ -124,7 +124,7 @@ function Phone() {
                 setRenders(renders + 1);
                 setTimeout(() => {
                   window.location.assign("/arrays");
-                }, 2000);
+                }, 1500);
               }}
             >
               <h1> Arrays </h1>
@@ -136,7 +136,16 @@ function Phone() {
             </div>
             <div
               className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
-              id="block-gray"
+              onClick={(el) => {
+                const docs = el.currentTarget;
+                docs.classList.add("active");
+                docs.classList.add("bg");
+                docs.innerText = "";
+                setRenders(renders + 1);
+                setTimeout(() => {
+                  window.location.assign("/patterns");
+                }, 1500);
+              }}
             >
               <h1> Patterns </h1>
               <h2 className="text-white md:text-2xl text-sm">Programs</h2>

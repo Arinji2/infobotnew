@@ -61,7 +61,7 @@ function Patterns() {
           : "flex flex-col items-center h-full w-screen bg os"
       }
     >
-      <h1 className="text-yellow-400 os text-4xl text-center">Loops</h1>
+      <h1 className="text-yellow-400 os text-4xl text-center">Patterns</h1>
       <h2 className="text-white os text-2xl text-center">Powered by InfoBot</h2>
       {data.length > 0 ? (
         <></>

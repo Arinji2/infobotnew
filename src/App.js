@@ -23,6 +23,7 @@ import ArraysBoot from "./pages/arrays/arraysBoot";
 import Arrays from "./pages/arrays/arrays";
 import StringsBoot from "./pages/strings/stringsBoot";
 import Strings from "./pages/strings/strings";
+import PatternsBoot from "./pages/patterns/patternsBoot";
 import Patterns from "./pages/patterns/patterns";
 import Footer from "./components/footer";
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/arrays-Loaded" element={<Arrays />}></Route>
           <Route path="/strings" element={<StringsBoot />}></Route>
           <Route path="/strings-Loaded" element={<Strings />}></Route>
+          <Route path="/patterns" element={<PatternsBoot />}></Route>
           <Route path="/patterns-Loaded" element={<Patterns />}></Route>
         </Routes>
       </Router>
