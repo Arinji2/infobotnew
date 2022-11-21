@@ -21,7 +21,7 @@ function Arrays() {
     }, 500);
   }, []);
   const getLocations = async () => {
-    const docRef = doc(db, "locations", "arrays");
+    const docRef = doc(db, "locations", "array");
     const docSnap = await getDoc(docRef);
     setData(docSnap.data().paths);
     console.log(docSnap.data());
@@ -235,7 +235,7 @@ function Post({ title, code, explanation, logic }) {
           dangerouslySetInnerHTML={{ __html: explanation }}
         ></h1>
         <h1
-          className=" text-sm bg-black p-5 rounded-lg  text-yellow-300"
+          className=" text-sm bg-black p-5 rounded-lg  text-white"
           dangerouslySetInnerHTML={{ __html: code }}
         ></h1>
 
