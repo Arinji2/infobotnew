@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { db } from "../../firebase.config";
 import { getDoc, doc } from "firebase/firestore";
 import { Oval } from "react-loader-spinner";
-
+import Footer from "../../components/footer";
 import "../pages.css";
+
 function Patterns() {
   const [data, setData] = useState([]);
   const [choice, setChoice] = useState("");
@@ -54,57 +55,62 @@ function Patterns() {
   };
 
   return (
-    <div
-      className={
-        file
-          ? "flex flex-col items-center h-fit w-screen bg os"
-          : "flex flex-col items-center h-full w-screen bg os"
-      }
-    >
-      <h1 className="text-yellow-400 os text-4xl text-center">Patterns</h1>
-      <h2 className="text-white os text-2xl text-center">Powered by InfoBot</h2>
-      {data.length > 0 ? (
-        <></>
-      ) : (
-        <div className="h-screen w-screen flex flex-col items-center justify-center">
-          <Oval
-            color="yellow"
-            secondaryColor="transparent"
-            height="200"
-            width="200"
-          />
-        </div>
-      )}
+    <React.Fragment>
       <div
         className={
           file
-            ? "hidden"
-            : "flex flex-row items-center justify-evenly flex-wrap w-screen"
+            ? "flex flex-col items-center h-fit w-screen bg os"
+            : "flex flex-col items-center h-full w-screen bg os"
         }
       >
-        {data.map((item) => {
-          return (
-            <li
-              className="text-white list-none bg-black p-2 rounded-lg w-fit h-fit z-30 text-xl hover:cursor-pointer scale-90 hover:scale-100 hover:shadow-lg hover:shadow-black transition-all ease-in-out duration-300"
-              dangerouslySetInnerHTML={{ __html: item }}
-              key={item}
-              onClick={() => {
-                setChoice(item);
-              }}
-            ></li>
-          );
-        })}
+        <h1 className="text-yellow-400 os text-4xl text-center">Patterns</h1>
+        <h2 className="text-white os text-2xl text-center">
+          Powered by InfoBot
+        </h2>
+        {data.length > 0 ? (
+          <></>
+        ) : (
+          <div className="h-screen w-screen flex flex-col items-center justify-center">
+            <Oval
+              color="yellow"
+              secondaryColor="transparent"
+              height="200"
+              width="200"
+            />
+          </div>
+        )}
+        <div
+          className={
+            file
+              ? "hidden"
+              : "flex flex-row items-center justify-evenly flex-wrap w-screen"
+          }
+        >
+          {data.map((item) => {
+            return (
+              <li
+                className="text-white list-none bg-black p-2 rounded-lg w-fit h-fit z-30 text-sm md:text-xl hover:cursor-pointer scale-90 hover:scale-100 hover:shadow-lg hover:shadow-black transition-all ease-in-out duration-300"
+                dangerouslySetInnerHTML={{ __html: item }}
+                key={item}
+                onClick={() => {
+                  setChoice(item);
+                }}
+              ></li>
+            );
+          })}
+        </div>
+        <div className={file ? "block" : "hidden"}>
+          <Post
+            code={code}
+            display={choice}
+            logic={logic}
+            setFile={setFile}
+            setChoice={setChoice}
+          />
+        </div>
       </div>
-      <div className={file ? "block" : "hidden"}>
-        <Post
-          code={code}
-          display={choice}
-          logic={logic}
-          setFile={setFile}
-          setChoice={setChoice}
-        />
-      </div>
-    </div>
+      <Footer />
+    </React.Fragment>
   );
 }
 

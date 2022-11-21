@@ -3,6 +3,7 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { db } from "../../firebase.config";
 
 import { getDoc, doc } from "firebase/firestore";
+import Footer from "../../components/footer";
 function Strings() {
   const [title, setTitle] = useState("");
   const [code, setCode] = useState("");
@@ -110,7 +111,7 @@ function Strings() {
             formatResult={formatResult}
             onSelect={onSelect}
             onSearch={onSelect}
-            placeholder="Armstrong"
+            placeholder="Toggle Case"
             maxResults={10}
           />
         </div>
@@ -118,108 +119,114 @@ function Strings() {
     );
   }
   return (
-    <div>
-      <div
-        className={
-          ready
-            ? "h-fit w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
-            : "h-fit md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
-        }
-      >
-        <div className={opacity}>
-          <div className="text-white z-30">
-            <div>
-              <h1 className="text-yellow-400 os text-4xl text-center">
-                Strings
-              </h1>
-              <h2 className="text-white os text-2xl text-center">
-                Powered by InfoBot
-              </h2>
-              <Input />
-              {ready ? (
-                <Post
-                  title={title}
-                  code={code}
-                  explanation={explanation}
-                  logic={logic}
-                />
-              ) : (
-                <div className="flex flex-col items-center justify-center">
-                  <div className="flex flex-col items-center justify-center os m-4 gap-9  md:w-2/4 text-center">
-                    <h1 className="text-white text-2xl">
-                      Type to Start Searching!
-                    </h1>
+    <React.Fragment>
+      <div>
+        <div
+          className={
+            ready
+              ? "h-fit w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
+              : "h-fit md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg"
+          }
+        >
+          <div className={opacity}>
+            <div className="text-white z-30">
+              <div>
+                <h1 className="text-yellow-400 os text-4xl text-center">
+                  Strings
+                </h1>
+                <h2 className="text-white os text-2xl text-center">
+                  Powered by InfoBot
+                </h2>
+                <Input />
+                {ready ? (
+                  <Post
+                    title={title}
+                    code={code}
+                    explanation={explanation}
+                    logic={logic}
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center os m-4 gap-9  md:w-2/4 text-center">
+                      <h1 className="text-white text-2xl">
+                        Type to Start Searching!
+                      </h1>
 
-                    <h2 className="text-2xl text-yellow-400">
-                      How does the InfoBot Search Work?
-                    </h2>
+                      <h2 className="text-2xl text-yellow-400">
+                        How does the InfoBot Search Work?
+                      </h2>
 
-                    <p>
-                      Just start typing in the Search Box with keywords related
-                      to the topic and watch InfoBot suggest you other keywords
-                      based on what you type.
-                    </p>
-                    <div className="">
-                      <h3 className="text-md md:text-xl text-green-400">
-                        Each Program is setup in the following Format <br />{" "}
-                        (Ps: Take Note of the different Shades)
-                      </h3>
-                      <div className="flex flex-row items-center justify-evenly gap-4 flex-wrap ">
-                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-500">1.</span>Title
-                        </h1>
+                      <p>
+                        Just start typing in the Search Box with keywords
+                        related to the topic and watch InfoBot suggest you other
+                        keywords based on what you type.
+                      </p>
+                      <div className="">
+                        <h3 className="text-md md:text-xl text-green-400">
+                          Each Program is setup in the following Format <br />{" "}
+                          (Ps: Take Note of the different Shades)
+                        </h3>
+                        <div className="flex flex-row items-center justify-evenly gap-4 flex-wrap ">
+                          <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                            <span className="text-yellow-500">1.</span>Title
+                          </h1>
 
-                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-400">2.</span>Explanation
-                        </h1>
-                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-300">3.</span>Code
-                        </h1>
-                        <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
-                          <span className="text-yellow-200">4.</span>Logic
-                        </h1>
+                          <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                            <span className="text-yellow-400">2.</span>
+                            Explanation
+                          </h1>
+                          <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                            <span className="text-yellow-300">3.</span>Code
+                          </h1>
+                          <h1 className="text-md md:text-lg shadow-md shadow-black p-2 rounded-lg">
+                            <span className="text-yellow-200">4.</span>Logic
+                          </h1>
+                        </div>
                       </div>
-                    </div>
-                    <div className="hidden  w-[90vw] md:flex flex-row items-center gap-4 ">
-                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-500 text-xl">Title</h2>
-                        <p>
-                          The Title of the Program is the Name of it. For easier
-                          access the Keyword for InfoBot Search is the title of
-                          the Program.
-                        </p>
-                      </div>
-                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-400 text-xl">Explanation</h2>
-                        <p>
-                          The Explanation of the Program gives an overview of
-                          what the Question wants us to do.
-                        </p>
-                      </div>
-                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-300 text-xl">Code</h2>
-                        <p>
-                          The Code is the Java Code which solves the program. It
-                          is all checked and re checked so feel free to just
-                          copy paste it.
-                        </p>
-                      </div>
-                      <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
-                        <h2 className="text-yellow-200 text-xl">Logic</h2>
-                        <p>
-                          The Logic of the Program are the methods and steps
-                          taken to solve the program by the writers.
-                        </p>
+                      <div className="hidden  w-[90vw] md:flex flex-row items-center gap-4 ">
+                        <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                          <h2 className="text-yellow-500 text-xl">Title</h2>
+                          <p>
+                            The Title of the Program is the Name of it. For
+                            easier access the Keyword for InfoBot Search is the
+                            title of the Program.
+                          </p>
+                        </div>
+                        <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                          <h2 className="text-yellow-400 text-xl">
+                            Explanation
+                          </h2>
+                          <p>
+                            The Explanation of the Program gives an overview of
+                            what the Question wants us to do.
+                          </p>
+                        </div>
+                        <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                          <h2 className="text-yellow-300 text-xl">Code</h2>
+                          <p>
+                            The Code is the Java Code which solves the program.
+                            It is all checked and re checked so feel free to
+                            just copy paste it.
+                          </p>
+                        </div>
+                        <div className="w-2/3 shadow-2xl shadow-black p-2 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 hover:cursor-pointer">
+                          <h2 className="text-yellow-200 text-xl">Logic</h2>
+                          <p>
+                            The Logic of the Program are the methods and steps
+                            taken to solve the program by the writers.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </React.Fragment>
   );
 }
 

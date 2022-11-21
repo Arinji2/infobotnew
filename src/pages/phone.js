@@ -51,6 +51,7 @@ function Phone() {
               id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
+                docs.id = "";
                 docs.classList.add("active");
                 docs.classList.add("bg");
                 docs.innerText = "";
@@ -72,6 +73,7 @@ function Phone() {
               id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
+                docs.id = "";
                 docs.classList.add("active");
                 docs.classList.add("bg");
                 docs.innerText = "";
@@ -93,6 +95,7 @@ function Phone() {
               id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
+                docs.id = "";
                 docs.classList.add("active");
                 docs.classList.add("bg");
                 docs.innerText = "";
@@ -125,7 +128,9 @@ function Phone() {
               id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
+                docs.id = "";
                 docs.classList.add("active");
+
                 docs.classList.add("bg");
                 docs.innerText = "";
                 setRenders(renders + 1);
@@ -146,6 +151,7 @@ function Phone() {
               id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
+                docs.id = "";
                 docs.classList.add("active");
                 docs.classList.add("bg");
                 docs.innerText = "";
