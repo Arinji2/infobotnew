@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Screen from "./components/screen";
 import Boot from "./pages/boot";
 import Auth from "./pages/auth";
 import Off from "./pages/off";
@@ -25,11 +24,10 @@ import StringsBoot from "./pages/strings/stringsBoot";
 import Strings from "./pages/strings/strings";
 import PatternsBoot from "./pages/patterns/patternsBoot";
 import Patterns from "./pages/patterns/patterns";
-import Footer from "./components/footer";
+
 function App() {
   return (
     <div className="main h-screen">
-      <Screen />
       <Router>
         <Routes>
           <Route path="/" element={<Boot />}></Route>
@@ -57,8 +55,6 @@ function App() {
           <Route path="/patterns-Loaded" element={<Patterns />}></Route>
         </Routes>
       </Router>
-
-      <Footer />
     </div>
   );
 }

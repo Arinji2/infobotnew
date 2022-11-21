@@ -47,7 +47,8 @@ function Phone() {
           {/*Row 1 */}
           <div className="flex flex-row flex-wrap justify-center md:justify-evenly w-screen text-yellow-400 os text-lg md:text-2xl text-center items-center border-b-2 border-white rounded-xl p-4 mt-4">
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group"
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
@@ -67,7 +68,8 @@ function Phone() {
               ></FontAwesomeIcon>
             </div>
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
@@ -87,7 +89,8 @@ function Phone() {
               />
             </div>
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
@@ -106,7 +109,10 @@ function Phone() {
                 className="relative top-6 text-3xl group-hover:text-4xl transition-all ease-in-out duration-700 "
               />
             </div>
-            <div className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer">
+            <div
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
+            >
               <h1> Classes </h1>
               <h2 className="text-white md:text-2xl text-sm">Programs</h2>
               <FontAwesomeIcon
@@ -115,7 +121,8 @@ function Phone() {
               ></FontAwesomeIcon>
             </div>
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
@@ -135,7 +142,8 @@ function Phone() {
               />
             </div>
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
                 docs.classList.add("active");
@@ -155,8 +163,8 @@ function Phone() {
               />
             </div>
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
-              id="block-gray"
+              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              id="block-black"
             >
               <h1> Series </h1>
               <h2 className="text-white md:text-2xl text-sm">Programs</h2>
@@ -243,46 +251,36 @@ function Phone() {
             id="r-5"
           >
             <div
-              className="w-10  md:w-14 h-10 md:h-14 shadow-lg shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
+              className="w-10  md:w-14 h-10 md:h-14 shadow-lg bg-black shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
               onClick={() => {
                 window.location.assign("/account");
               }}
             >
               <Icon
-                icon="bx:user"
+                icon="mdi:user"
                 className=" text-3xl group-hover:text-4xl transition-all ease-in-out duration-500"
               />
             </div>
             <div
-              className="w-10  md:w-14 h-10 md:h-14 shadow-lg shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
+              className="w-10  md:w-14 h-10 md:h-14 shadow-lg  bg-black shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
               onClick={() => {
                 window.location.assign("/settings");
               }}
             >
               <Icon
-                icon="arcticons:google-settings"
+                icon="material-symbols:settings"
                 className=" text-3xl group-hover:text-4xl transition-all ease-in-out duration-500"
               />
             </div>
+
             <div
-              className="w-10  md:w-14 h-10 md:h-14 shadow-lg shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
-              onClick={() => {
-                window.location.assign("/chat");
-              }}
-            >
-              <Icon
-                icon="bi:chat-square"
-                className=" text-3xl group-hover:text-4xl transition-all ease-in-out duration-500"
-              />
-            </div>
-            <div
-              className="w-10  md:w-14 h-10 md:h-14 shadow-lg shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
+              className="w-10  md:w-14 h-10 md:h-14 shadow-lg  bg-black shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
               onClick={() => {
                 window.location.assign("/off");
               }}
             >
               <Icon
-                icon="bi:power"
+                icon="material-symbols:power-settings-new-rounded"
                 className=" text-3xl group-hover:text-4xl transition-all ease-in-out duration-500"
               />
             </div>

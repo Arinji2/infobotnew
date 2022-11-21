@@ -7,7 +7,7 @@ import {
   faChevronRight,
   faChevronLeft,
 } from "@fortawesome/fontawesome-free-solid";
-
+import Footer from "../../components/footer";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import Arinji from "./profiles/Arinji.png";
@@ -32,7 +32,7 @@ import Nikhilesh from "./profiles/Nikhilesh.png";
 
 function Team() {
   const [opacity, setOpacity] = useState(
-    "opacity-0 z-20 transition-all duration-500 ease-in-out m-2"
+    "opacity-0  transition-all duration-500 ease-in-out m-2"
   );
 
   const [arrowRightRotate, setArrowRightRotate] = useState(
@@ -48,7 +48,7 @@ function Team() {
 
   useEffect(() => {
     setTimeout(() => {
-      setOpacity("opacity-100 z-20 transition-all duration-500 ease-in-out");
+      setOpacity("opacity-100  transition-all duration-500 ease-in-out");
     }, 500);
   });
 
@@ -501,67 +501,21 @@ function Team() {
     }
   };
   return (
-    <div className="h-fit md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg">
-      <div className={opacity}>
-        <h1 className="text-yellow-400 os text-4xl font-extrabold text-center">
-          <span className="text-white">Meet</span>{" "}
-          <span className="text-yellow">the</span>{" "}
-          <span className="text-white">InfoBot</span>{" "}
-          <span className="text-yellow">Team</span>
-        </h1>
-        <h1 className="text-yellow-400 text-xl os text-center">
-          {true ? renderHeading(page) : null}
-        </h1>
-        <div className="h-full w-screen flex flex-row flex-wrap md:flex-nowrap items-start justify-evenly mt-5">
-          <p
-            className="text-white text-2xl relative top-60 hidden md:block"
-            onMouseOver={() => {
-              setArrowLeftRotate(
-                "fast-spin-left scale-100 hover:cursor-pointer"
-              );
-            }}
-            onMouseOut={() => {
-              setArrowLeftRotate("scale-90 hover:cursor-pointer");
-            }}
-            onClick={() => {
-              if (page !== 0) {
-                setMode("fadeOutRightBig");
-                setTimeout(() => {
-                  setPage(page - 1);
-                  setMode("fadeInLeftBig");
-                }, 2400);
-              }
-            }}
-          >
-            <FontAwesomeIcon icon={faChevronLeft} className={arrowLeftRotate} />
-          </p>
-          {true ? renderPage(page) : null}
-          <p
-            className="text-white text-2xl relative top-60 hidden md:block"
-            onMouseOver={() => {
-              setArrowRightRotate("fast-spin scale-100 hover:cursor-pointer");
-            }}
-            onMouseOut={() => {
-              setArrowRightRotate("scale-90 hover:cursor-pointer");
-            }}
-            onClick={() => {
-              if (page !== 6) {
-                setMode("fadeOutLeftBig");
-                setTimeout(() => {
-                  setPage(page + 1);
-                  setMode("fadeInRightBig");
-                }, 2000);
-              }
-            }}
-          >
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              className={arrowRightRotate}
-            />
-          </p>
-          <div className="md:fixed  w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2 border-4 border-b-0 border-white  md:p-0 md:border-0 md:border-none">
+    <React.Fragment>
+      <div className="h-max md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg">
+        <div className={opacity}>
+          <h1 className="text-yellow-400 os text-4xl font-extrabold text-center">
+            <span className="text-white">Meet</span>{" "}
+            <span className="text-yellow">the</span>{" "}
+            <span className="text-white">InfoBot</span>{" "}
+            <span className="text-yellow">Team</span>
+          </h1>
+          <h1 className="text-yellow-400 text-xl os text-center">
+            {true ? renderHeading(page) : null}
+          </h1>
+          <div className="h-max w-screen flex flex-row flex-wrap md:flex-nowrap items-start justify-evenly mt-5">
             <p
-              className="text-white text-2xl  block md:hidden"
+              className="text-white text-2xl relative top-60 hidden md:block"
               onMouseOver={() => {
                 setArrowLeftRotate(
                   "fast-spin-left scale-100 hover:cursor-pointer"
@@ -576,7 +530,7 @@ function Team() {
                   setTimeout(() => {
                     setPage(page - 1);
                     setMode("fadeInLeftBig");
-                  }, 2000);
+                  }, 2400);
                 }
               }}
             >
@@ -585,8 +539,9 @@ function Team() {
                 className={arrowLeftRotate}
               />
             </p>
+            {true ? renderPage(page) : null}
             <p
-              className="text-white text-2xl  block md:hidden"
+              className="text-white text-2xl relative top-60 hidden md:block"
               onMouseOver={() => {
                 setArrowRightRotate("fast-spin scale-100 hover:cursor-pointer");
               }}
@@ -599,7 +554,7 @@ function Team() {
                   setTimeout(() => {
                     setPage(page + 1);
                     setMode("fadeInRightBig");
-                  }, 2400);
+                  }, 2000);
                 }
               }}
             >
@@ -608,10 +563,63 @@ function Team() {
                 className={arrowRightRotate}
               />
             </p>
+            <div className="md:fixed  w-screen flex flex-row justify-evenly gap-5 text-white text-2xl p-2 border-4 border-b-0 border-white  md:p-0 md:border-0 md:border-none mb-20">
+              <p
+                className="text-white text-2xl  block md:hidden"
+                onMouseOver={() => {
+                  setArrowLeftRotate(
+                    "fast-spin-left scale-100 hover:cursor-pointer"
+                  );
+                }}
+                onMouseOut={() => {
+                  setArrowLeftRotate("scale-90 hover:cursor-pointer");
+                }}
+                onClick={() => {
+                  if (page !== 0) {
+                    setMode("fadeOutRightBig");
+                    setTimeout(() => {
+                      setPage(page - 1);
+                      setMode("fadeInLeftBig");
+                    }, 2000);
+                  }
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faChevronLeft}
+                  className={arrowLeftRotate}
+                />
+              </p>
+              <p
+                className="text-white text-2xl  block md:hidden"
+                onMouseOver={() => {
+                  setArrowRightRotate(
+                    "fast-spin scale-100 hover:cursor-pointer"
+                  );
+                }}
+                onMouseOut={() => {
+                  setArrowRightRotate("scale-90 hover:cursor-pointer");
+                }}
+                onClick={() => {
+                  if (page !== 6) {
+                    setMode("fadeOutLeftBig");
+                    setTimeout(() => {
+                      setPage(page + 1);
+                      setMode("fadeInRightBig");
+                    }, 2400);
+                  }
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  className={arrowRightRotate}
+                />
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </React.Fragment>
   );
 }
 
