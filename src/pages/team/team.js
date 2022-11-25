@@ -500,6 +500,7 @@ function Team() {
         return "The Writers of InfoBot";
     }
   };
+
   return (
     <React.Fragment>
       <div className="h-max md:h-screen w-screen border-b-0 md:border-b-4 md:rounded-lg border-4 border-white flex justify-center p-2 bg">
@@ -510,10 +511,10 @@ function Team() {
             <span className="text-white">InfoBot</span>{" "}
             <span className="text-yellow">Team</span>
           </h1>
-          <h1 className="text-yellow-400 text-xl os text-center">
+          <h1 className="text-yellow-400 text-xl os text-center md:block hidden">
             {true ? renderHeading(page) : null}
           </h1>
-          <div className="h-max w-screen flex flex-row flex-wrap md:flex-nowrap items-start justify-evenly mt-5">
+          <div className="h-max w-screen flex-row flex-wrap md:flex-nowrap items-start justify-evenly mt-5 md:flex hidden">
             <p
               className="text-white text-2xl relative top-60 hidden md:block"
               onMouseOver={() => {
@@ -616,6 +617,108 @@ function Team() {
               </p>
             </div>
           </div>
+          <div className="flex flex-row flex-wrap items-center justify-evenly h-screen w-screen os md:hidden">
+            <InfoBox
+              name="Arinjay"
+              fullName="Arinjay Dhar"
+              role="CEO"
+              fullRole="Chief Executive Officer"
+              icon={Arinji}
+              about="Creator of the Site, Extroverted and Excited. Loves coding in React Js and aspires to work for Google. Exceptionally bad at Hindi and has a weird American Accent. Caffeinated 24/7"
+            />
+            <InfoBox
+              name="Vedika"
+              fullName="Vedika Panjwani"
+              role="COO"
+              fullRole="Chief Operating Officer"
+              icon={Vedika}
+              about="An ambivert, someone with whom you become friends very easily.
+              Hardcore bollywood fan and hence adapts to the situation easily.
+              Loves computer applications, yellow lays and the sky."
+            />
+            <InfoBox
+              name="Nilay"
+              fullName="Nilay Bagchi"
+              role="CFO"
+              fullRole="Chief Financial Officer"
+              icon={Nilay}
+              about="Calm, Cool and Collected. The chill guy you would go to when you
+              feel low. Hopes for depression to be eradicated from the world,
+              and does his best to help others against it."
+            />
+            <InfoBox
+              name="Saesha"
+              fullName="Saesha Chaturvedi"
+              role="HRM"
+              fullRole="Human Resources Manager"
+              icon={Saesha}
+              about="Simple yet Marvelous. Always there to support all her peers, and never lets anyone feel left out. Hates holding grudges and is loved by everyone."
+            />
+            <InfoBox
+              name="Aryan"
+              fullName="Aryan Pandey"
+              role="CSO"
+              fullRole="Chief Systems Officer"
+              icon={Aryan}
+              about="An Awesome Dude, Exceptionally good at Computers. Could take over the world if he wanted, but is too lazy. Can go from your best friend to your worst enemy with the snap of a finger."
+            />
+            <InfoBox
+              name="Aarav"
+              fullName="Aarav Mehta"
+              role="Donator"
+              fullRole="Donator"
+              icon={Aarav}
+              about="Prime Example of a true friend. If one homeless person was given a home for every time Aarav is seen not smiling, homelessness would still be a thing."
+            />
+            <InfoBox
+              name="Aditya"
+              fullName="Aditya Manthalkar"
+              role="Donator"
+              fullRole="Donator"
+              icon={Aditya}
+              about="Words cannot describe, the vibes of this legend. Feeling bored is an alien topic when around him. Aditya is the type of person to look at things and somehow give it a more, sinister meaning."
+            />
+            <InfoBox
+              name="Anwesha"
+              fullName="Anwesha Roy"
+              role="Head"
+              fullRole="Head of Writing"
+              icon={Anwesha}
+              about="Lazy but also Energetic when the time presents itself. Loves Coffee and could not survive without it. Loves to Gossip and is exceptionally bad at keeping secrets. But Awesome and Lovely in the end."
+            />
+            <InfoBox
+              name="Kunsh"
+              fullName="Kunsh Merhotra"
+              role="Head"
+              fullRole="Head of Verification"
+              icon={Kunsh}
+              about="An introvert and hilarious dude who can sometimes be creative. Co-operative to work with others and born ready to learn and try new things. Loves to play games and work out."
+            />
+            <InfoBox
+              name="Aarav"
+              fullName="Aarav Lath"
+              role="Head"
+              fullRole="Head of PTO's"
+              icon={Lath}
+              about="Organized mess. 2 words that perfectly describe him. He is extroverted and in a good mood practically all the time. Procrastination is his 2nd name."
+            />
+            <InfoBox
+              name="Dhanvin"
+              fullName="Dhanvin Nair"
+              role="Developer"
+              fullRole="Junior Developer"
+              icon={Dhanvin}
+              about="Extroverted and always cheerful. Loves spreading Positive Vibes. Enjoys coding and developing new things. New to the field of React. Experienced in Java."
+            />
+            <InfoBox
+              name="Vedant"
+              fullName="Vedant Iyengar"
+              role="Developer"
+              fullRole="Junior Developer"
+              icon={Vedant}
+              about="A person guided by discipline and master skills. Understanding, supportive and a true friend with an amazing sense of humor. Never fears to face whats coming."
+            />
+          </div>
         </div>
       </div>
       <Footer />
@@ -651,4 +754,41 @@ function Profile({ name, role, icon, about, insta, email }) {
     </div>
   );
 }
+
+function InfoBox({ name, fullName, role, fullRole, icon, about }) {
+  const [resized, isResizing] = useState(false);
+  return (
+    <div
+      className="w-28  bg-slate-700 p-2 rounded-lg text-center hover:z-50  hover:absolute hover:w-[95vw] hover:h-[95vh] group flex flex-col items-center hover:gap-5"
+      onMouseEnter={(el) => {
+        isResizing(true);
+      }}
+      onMouseLeave={() => {
+        isResizing(false);
+      }}
+    >
+      <img
+        src={icon}
+        alt={name}
+        className="group-hover:w-[80%] aspect-square group-hover:rounded-lg"
+      />
+      <p className="text-white group-hover:hidden">{name}</p>
+      <p className="text-white group-hover:block hidden text-2xl">{fullName}</p>
+      <p className="text-yellow-400 group-hover:hidden">{role}</p>
+      <p className="text-yellow-400 group-hover:block hidden text-lg">
+        {fullRole}
+      </p>
+      {resized ? (
+        <p className="hidden group-hover:block text-white text-sm">{about}</p>
+      ) : (
+        <></>
+      )}
+
+      <p className="text-yellow-400 text-sm border-2 border-white p-2 rounded-lg group-hover:block absolute bottom-5 hidden">
+        Click Outside the Box to Close
+      </p>
+    </div>
+  );
+}
+
 export default Team;
