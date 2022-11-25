@@ -147,7 +147,7 @@ function Phone() {
               />
             </div>
             <div
-              className="w-24 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
+              className="w-28 md:w-48 h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer rounded-lg"
               id="block-black"
               onClick={(el) => {
                 const docs = el.currentTarget;
@@ -186,7 +186,7 @@ function Phone() {
               className="w-28 md:w-56 h-20 md:h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center justify-center md:justify-start group hover:cursor-pointer"
               id="block-black"
             >
-              <h1> Specific Test </h1>
+              <h1> Coming Soon! </h1>
               <h2 className="text-white">PTO</h2>
               <Icon
                 icon="ci:repeat"
@@ -201,7 +201,7 @@ function Phone() {
               className="w-28 md:w-56 h-20 md:h-32 shadow-lg shadow-black bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center md:justify-start "
               id="block-black"
             >
-              <h1> Random Test </h1>
+              <h1> Coming Soon! </h1>
               <h2 className="text-white">PTO</h2>
               <Icon
                 icon="fa:random"
@@ -264,17 +264,6 @@ function Phone() {
             >
               <Icon
                 icon="mdi:user"
-                className=" text-3xl group-hover:text-4xl transition-all ease-in-out duration-500"
-              />
-            </div>
-            <div
-              className="w-10  md:w-14 h-10 md:h-14 shadow-lg  bg-black shadow-gray-800 bg-transparent scale-90 md:hover:scale-100 relative flex flex-col items-center group justify-center transition-all ease-in-out duration-500"
-              onClick={() => {
-                window.location.assign("/settings");
-              }}
-            >
-              <Icon
-                icon="material-symbols:settings"
                 className=" text-3xl group-hover:text-4xl transition-all ease-in-out duration-500"
               />
             </div>
