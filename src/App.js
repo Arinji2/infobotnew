@@ -24,6 +24,7 @@ import StringsBoot from "./pages/strings/stringsBoot";
 import Strings from "./pages/strings/strings";
 import PatternsBoot from "./pages/patterns/patternsBoot";
 import Patterns from "./pages/patterns/patterns";
+import Account from "./pages/icons/account";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="/strings-Loaded" element={<Strings />}></Route>
           <Route path="/patterns" element={<PatternsBoot />}></Route>
           <Route path="/patterns-Loaded" element={<Patterns />}></Route>
+          <Route path="/account" element={<Account />}></Route>
         </Routes>
       </Router>
     </div>
