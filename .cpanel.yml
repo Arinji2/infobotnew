@@ -2,11 +2,11 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/arinji/public_html/
+    - export DEPLOYPATH=/home/arinji/repositories/infobotos
     - /bin/cp -R .vscode $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R fonts $DEPLOYPATH
     - /bin/cp -R img $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
-    /bin/cp index.html $DEPLOYPAT
+    /bin/cp index.html $DEPLOYPATH
