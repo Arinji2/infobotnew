@@ -1,6 +1,7 @@
 {
   "name": "infobotnew",
   "version": "0.1.0",
+  "homepage": "https://os.infobot.tech",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
